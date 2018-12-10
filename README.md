@@ -81,10 +81,15 @@ A policy is the agent’s behaviour. It is a map from state to action.
 - Control: optimise the future (Find the best policy).
 
 ## Grid World:
+- Grid World is a game for demonstration. 12 positions, 11 states, 4 actions. Our aim is to find optimal policy. 
+- ![grid-world](https://user-images.githubusercontent.com/10358317/49739821-d77d9300-fca3-11e8-893d-af7690d114b2.jpg)
+- ![optimal-policy-grid](https://user-images.githubusercontent.com/10358317/49739871-f714bb80-fca3-11e8-93c3-43a72284b7ba.jpg)
 
 ## Dynamic Programming Method: Full Model
 ### Policy Iteration:
 ### Iterative policy evaluation:
+![iterative-policy-evaluation](https://user-images.githubusercontent.com/10358317/49739932-1d3a5b80-fca4-11e8-962f-26348b323c63.jpg)
+
 ### Policy Improvement:
 
 ## Monte Carlo Method:
