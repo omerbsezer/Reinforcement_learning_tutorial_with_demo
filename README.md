@@ -3,7 +3,7 @@ Machine learning mainly consists of three methods: Supervised Learning, Unsuperv
 
 **Keywords:** Dynamic Programming (Policy and Value Iteration), Monte Carlo, Temporal Difference (SARSA, QLearning), Approximation, Policy Gradient, DQN.
 
-**NOTE:There are many tutorials in the internet. This one summarizes all of the tutorials with demo of RL algorithms.**
+**NOTE: There are many tutorials in the internet. This one summarizes all of the tutorials with demo of RL algorithms.**
 
 ## What is RL?
 "A reinforcement learning algorithm, or agent, learns by interacting with its environment. The agent receives rewards by performing correctly and penalties for performing incorrectly. The agent learns without intervention from a human by maximizing its reward and minimizing its penalty" [*](https://www.techopedia.com/definition/32055/reinforcement-learning). RL agents are used in different applications: Robotics, self driving cars, playing atari games, managing investment portfolio, control problems. I am believing that like many AI laboratories do, reinforcement learning with deep learning will be a core technology in the future.
