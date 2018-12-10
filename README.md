@@ -12,13 +12,39 @@ Machine learning mainly consists of three methods: Supervised Learning, Unsuperv
 ## Multi-armed Bandit Problem:
 
 ## RL Components:
+### Markov Decision Process:
 ### Status:
 ### Actions:
 ### Rewards:
 ### Trans. Probability:
 ### Discount Factor:
 ### Value Function:
-### Policy:
+Value function is a prediction of future reward. How good is each state and/or action.
+- V<sub>π</sub>(s) =E<sub>π</sub>[R<sub>t+1</sub>+γR<sub>t+2</sub>+γ<sup>2</sup>R<sub>t+3</sub>+...|S<sub>t</sub>=s]
+### Policy (π): 
+A policy is the agent’s behaviour. It is a map from state to action. 
+- Deterministic policy: a=π(s).
+- Stochastic policy: π(a|s) =P[A<sub>t</sub>=a|S<sub>t</sub>=s].
+### Planning vs RL:
+#### Planning:
+- Rules of the game are known.
+- A model of the environment is known.
+- The agent performs computations with its mode.
+- The agent improves its policy.
+#### RL:
+- The environment is initially unknown.
+- The agent interacts with the environment.
+- The agent improves its policy.
+
+### Exploration and Exploitation:
+- Reinforcement learning is like trial-and-error learning.
+- The agent should discover a good policy.
+- Exploration finds more information about the environment.
+- Exploitation exploits known information to maximise reward
+
+### Prediction & Control Problem:
+- Prediction: evaluate the future (Given a policy).
+- Control: optimise the future (Find the best policy).
 
 ## Grid World:
 
