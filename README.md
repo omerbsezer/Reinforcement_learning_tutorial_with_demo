@@ -87,7 +87,9 @@ A policy is the agent’s behaviour. It is a map from state to action.
 
 ## Dynamic Programming Method: Full Model
 ### Policy Iteration:
-### Iterative policy evaluation:
+![policy iteration](https://user-images.githubusercontent.com/10358317/49740185-bf5a4380-fca4-11e8-80a4-fdc8dce8e349.jpg) [David Silver Lecture Notes]
+
+### Iterative policy evaluation (Pseudocode):
 ![iterative-policy-evaluation](https://user-images.githubusercontent.com/10358317/49739932-1d3a5b80-fca4-11e8-962f-26348b323c63.jpg)
 
 ### Policy Improvement:
