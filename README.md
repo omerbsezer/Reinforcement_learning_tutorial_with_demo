@@ -59,7 +59,10 @@ Machine learning mainly consists of three methods: Supervised Learning, Unsuperv
 ## Resources:
 Free Lectures:
 http://rail.eecs.berkeley.edu/deeprlcourse/
+
 https://sites.google.com/view/deep-rl-bootcamp/lectures
+
+http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html
 
 Udemy:
 
@@ -68,6 +71,7 @@ Udacity:
 ## Papers:
 Playing Atari
 AlphaGo, AlphaGo Zero
+Imitation Learning Paper
 
 ## References:
 Sutton & Barto Book: Reinforcement Learning: An Introduction PDF
