@@ -75,9 +75,9 @@ A policy is the agent’s behaviour. It is a map from state to action.
 - Exploration finds more information about the environment.
 - Exploitation exploits known information to maximise reward
 
-### Prediction & Control Problem:
-- Prediction: evaluate the future (Given a policy).
-- Control: optimise the future (Find the best policy).
+### Prediction & Control Problem (Pattern of RL algorithms):
+- Prediction: evaluate the future (Finding value given a policy).
+- Control: optimise the future (Finding optimal/best policy).
 
 ## Grid World:
 - Grid World is a game for demonstration. 12 positions, 11 states, 4 actions. Our aim is to find optimal policy. 
@@ -126,13 +126,29 @@ A policy is the agent’s behaviour. It is a map from state to action.
 - MC methods learn directly from episodes of experience.
 - MC is model-free :  no knowledge of MDP transitions / rewards.
 - MC uses the simplest possible idea: value = mean return.
+- Episode must terminate before calculating return.
+- Average return is calculated instead of using true return G.
 - First Visit MC: The first time-step t that state s is visited in an episode.
 - Every Visit MC: Every time-step t that state s is visited in an episode.
 
-### Exploring Stars:
-### Monte Carlo Prediction Problem:
-### Monte Carlo Control Problem:
-### Monte Carlo Epsilon Greedy:
+### MC Calculating Returns (with Pseudocode):
+![mc-calculating-returns](https://user-images.githubusercontent.com/10358317/49827998-cca62980-fd9b-11e8-999b-150aac525870.jpg)
+
+### First-Visit MC (with Pseudocode) (MC Prediction Problem):
+![first-visit-mc](https://user-images.githubusercontent.com/10358317/49827884-73d69100-fd9b-11e8-9623-16890aa3bbcb.jpg)
+
+### Exploring-Starts (with Pseudocode) (MC Control Problem):
+- State s and Action a is randomly selected for all starting points.
+- Use Q instead of V 
+- Update the policy after every episode, keep updating the same Q in-place.
+
+![mc-control1](https://user-images.githubusercontent.com/10358317/49828847-fbbd9a80-fd9d-11e8-9286-dee68c6fa1a2.jpg)
+
+### MC Epsilon Greedy (without Exploring Starts):
+- MC Exploring start is infeasible, because in real problems we can not calculate all edge cases (ex: in self-driving car problem, we can not calculate all cases).
+- Randomly selection for all starting points in code is removed.
+- Change policy to sometimes be random.
+- This random policy is Epsilon-Greedy (like multi-armed bandit problem)
 
 ## Temporal Difference (TD) Learning Method:
 - TD methods learn directly from episodes of experience.
