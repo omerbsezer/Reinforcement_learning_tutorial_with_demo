@@ -122,16 +122,37 @@ A policy is the agent’s behaviour. It is a map from state to action.
 
 ![value-iteration](https://user-images.githubusercontent.com/10358317/49805004-1de6f680-fd65-11e8-95b8-a3c224fbbe53.jpg)
 
-## Monte Carlo Method:
-
+## Monte Carlo (MC) Method:
+- MC methods learn directly from episodes of experience.
+- MC is model-free :  no knowledge of MDP transitions / rewards.
+- MC uses the simplest possible idea: value = mean return.
+- First Visit MC: The first time-step t that state s is visited in an episode.
+- Every Visit MC: Every time-step t that state s is visited in an episode.
 
 ### Exploring Stars:
 ### Monte Carlo Prediction Problem:
 ### Monte Carlo Control Problem:
 ### Monte Carlo Epsilon Greedy:
 
-## Temporal Difference Learning Method:
-### TD(0) Learning
+## Temporal Difference (TD) Learning Method:
+- TD methods learn directly from episodes of experience.
+- 
+## MC - TD Difference:
+- TD can learn before knowing the final outcome.
+- TD can learn online after every step. MC must wait until end of episode before return is known.
+- TD can learn without the final outcome.
+- TD can learn from incomplete sequences. MC can only learn from complete sequences.
+- TD works in continuing environments. MC only works for episodic environments.
+- MC has high variance, zero bias. TD has low variance, some bias.
+
+![mc-td-dif1](https://user-images.githubusercontent.com/10358317/49805899-60a9ce00-fd67-11e8-900e-38662cf36a54.jpg)
+![return](https://user-images.githubusercontent.com/10358317/49737029-c9784400-fc9c-11e8-8e05-23e6d7bb9fd0.jpg)
+[David Silver Lecture Notes]
+![mc-td-dif2](https://user-images.githubusercontent.com/10358317/49805902-61dafb00-fd67-11e8-8033-b06f8a3ed1c1.jpg)
+
+## MC - TD - DP Difference in Visual:
+![mc-td-dp](https://user-images.githubusercontent.com/10358317/49806522-01e55400-fd69-11e8-92a6-9bff14bb4c80.jpg)
+
 ### SARSA:
 ### Q-Learning:
 
