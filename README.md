@@ -22,9 +22,6 @@ Machine learning mainly consists of three methods: Supervised Learning, Unsuperv
 A state S<sub>t</sub> is Markov if and only if P[S<sub>t+1</sub>|S<sub>t</sub>] =P[S<sub>t+1</sub>|S<sub>1</sub>,...,S<sub>t</sub>]
 
 
-
-
-
 ## RL Components:
 ### Rewards:
 - A reward Rt is a scalar feedback signal.
@@ -95,11 +92,19 @@ A policy is the agent’s behaviour. It is a map from state to action.
 - Markov decision processes satisfy both properties. Bellman equation gives recursive decomposition. Value function stores and reuses solutions.
 - In DP method, full model is known, It is used for planning in an MDP.
 - There are 2 methods: Policy Iteration, Value Iteration.
+- DP uses full-width backups.
+- DP is effective for medium-sized problems (millions of states).
+- For large problems DP suffers Bellman’s curse of dimensionality. 
 
-### Policy Iteration:
+### Policy Iteration (with Pseudocode):
+- Policy Iteration consists of 2 main step: 1.Policy Evaluation, 2.Policy Iteration.
+
 ![policy iteration](https://user-images.githubusercontent.com/10358317/49740185-bf5a4380-fca4-11e8-80a4-fdc8dce8e349.jpg) [David Silver Lecture Notes]
 
-#### Iterative policy evaluation (Pseudocode):
+![policy-iteration](https://user-images.githubusercontent.com/10358317/49804775-871a3a00-fd64-11e8-90da-9550bcd1175c.jpg)
+
+
+#### Policy Evaluation (with Pseudocode):
 - Problem:  evaluate a given policy π.
 - Solution: iterative application of Bellman expectation backup.
 - v1 → v2→ ... → vπ.
@@ -107,10 +112,19 @@ A policy is the agent’s behaviour. It is a map from state to action.
 ![iterative-policy-evaluation](https://user-images.githubusercontent.com/10358317/49739932-1d3a5b80-fca4-11e8-962f-26348b323c63.jpg)
 
 #### Policy Improvement:
+![policy-improvement](https://user-images.githubusercontent.com/10358317/49804622-14a95a00-fd64-11e8-9ae0-932af77bbc0c.jpg)
 
-### Value Iteration:
+### Value Iteration (with Pseudocode):
+- Policy iteration has 2 inner loop. However, value iteration has a better solution.
+- It combines policy evaluation and policy improvement into one step.
+- Problem:  find optimal policy π.
+- Solution: iterative application of Bellman optimality backup.
+
+![value-iteration](https://user-images.githubusercontent.com/10358317/49805004-1de6f680-fd65-11e8-95b8-a3c224fbbe53.jpg)
 
 ## Monte Carlo Method:
+
+
 ### Exploring Stars:
 ### Monte Carlo Prediction Problem:
 ### Monte Carlo Control Problem:
