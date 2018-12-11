@@ -136,7 +136,10 @@ A policy is the agent’s behaviour. It is a map from state to action.
 
 ## Temporal Difference (TD) Learning Method:
 - TD methods learn directly from episodes of experience.
-- 
+- TD updates a guess towards a guess
+- TD learns from incomplete episodes, by bootstrapping.
+- TD uses bootstrapping like DP, TD learns experience like MC.
+
 ## MC - TD Difference:
 - TD can learn before knowing the final outcome.
 - TD can learn online after every step. MC must wait until end of episode before return is known.
@@ -147,11 +150,14 @@ A policy is the agent’s behaviour. It is a map from state to action.
 
 ![mc-td-dif1](https://user-images.githubusercontent.com/10358317/49805899-60a9ce00-fd67-11e8-900e-38662cf36a54.jpg)
 ![return](https://user-images.githubusercontent.com/10358317/49737029-c9784400-fc9c-11e8-8e05-23e6d7bb9fd0.jpg)
-[David Silver Lecture Notes]
 ![mc-td-dif2](https://user-images.githubusercontent.com/10358317/49805902-61dafb00-fd67-11e8-8033-b06f8a3ed1c1.jpg)
+
+![mc-td-dif3](https://user-images.githubusercontent.com/10358317/49810084-758b5f00-fd71-11e8-8b67-b1d8da52e45a.jpg)
+[David Silver Lecture Notes]
 
 ## MC - TD - DP Difference in Visual:
 ![mc-td-dp](https://user-images.githubusercontent.com/10358317/49806522-01e55400-fd69-11e8-92a6-9bff14bb4c80.jpg)
+[David Silver Lecture Notes]
 
 ### SARSA:
 ### Q-Learning:
