@@ -35,14 +35,16 @@ A state S<sub>t</sub> is Markov if and only if P[S<sub>t+1</sub>|S<sub>t</sub>] 
 - The discount γ∈[0,1] is the present value of future rewards.
 ### Return:
 - The return G<sub>t</sub> is the total discounted reward from time-step t.
-- ![return](https://user-images.githubusercontent.com/10358317/49737029-c9784400-fc9c-11e8-8e05-23e6d7bb9fd0.jpg)
+
+![return](https://user-images.githubusercontent.com/10358317/49737029-c9784400-fc9c-11e8-8e05-23e6d7bb9fd0.jpg)
 [David Silver Lecture Notes]
 ### Value Function:
 - Value function is a prediction of future reward. How good is each state and/or action.
 - The value function v(s) gives the long-term value of state s
 - V<sub>π</sub>(s) =E<sub>π</sub>[R<sub>t+1</sub>+γR<sub>t+2</sub>+γ<sup>2</sup>R<sub>t+3</sub>+...|S<sub>t</sub>=s]
 - Value function has two parts: immediate reward and discounted value of successor state.
-- ![value_function](https://user-images.githubusercontent.com/10358317/49737276-7eaafc00-fc9d-11e8-83ad-e21feec25c16.jpg)
+
+![value_function](https://user-images.githubusercontent.com/10358317/49737276-7eaafc00-fc9d-11e8-83ad-e21feec25c16.jpg)
 [David Silver Lecture Notes]
 ### Policy (π): 
 A policy is the agent’s behaviour. It is a map from state to action. 
@@ -82,17 +84,31 @@ A policy is the agent’s behaviour. It is a map from state to action.
 
 ## Grid World:
 - Grid World is a game for demonstration. 12 positions, 11 states, 4 actions. Our aim is to find optimal policy. 
-- ![grid-world](https://user-images.githubusercontent.com/10358317/49739821-d77d9300-fca3-11e8-893d-af7690d114b2.jpg)
-- ![optimal-policy-grid](https://user-images.githubusercontent.com/10358317/49739871-f714bb80-fca3-11e8-93c3-43a72284b7ba.jpg)
 
-## Dynamic Programming Method: Full Model
+![grid-world](https://user-images.githubusercontent.com/10358317/49739821-d77d9300-fca3-11e8-893d-af7690d114b2.jpg)
+
+![optimal-policy-grid](https://user-images.githubusercontent.com/10358317/49739871-f714bb80-fca3-11e8-93c3-43a72284b7ba.jpg)
+
+## Dynamic Programming Method (DP): Full Model
+- Dynamic Programming is a very general solution method for problems which have two properties:
+1.Optimal substructure, 2.Overlapping subproblems.
+- Markov decision processes satisfy both properties. Bellman equation gives recursive decomposition. Value function stores and reuses solutions.
+- In DP method, full model is known, It is used for planning in an MDP.
+- There are 2 methods: Policy Iteration, Value Iteration.
+
 ### Policy Iteration:
 ![policy iteration](https://user-images.githubusercontent.com/10358317/49740185-bf5a4380-fca4-11e8-80a4-fdc8dce8e349.jpg) [David Silver Lecture Notes]
 
-### Iterative policy evaluation (Pseudocode):
+#### Iterative policy evaluation (Pseudocode):
+- Problem:  evaluate a given policy π.
+- Solution: iterative application of Bellman expectation backup.
+- v1 → v2→ ... → vπ.
+
 ![iterative-policy-evaluation](https://user-images.githubusercontent.com/10358317/49739932-1d3a5b80-fca4-11e8-962f-26348b323c63.jpg)
 
-### Policy Improvement:
+#### Policy Improvement:
+
+### Value Iteration:
 
 ## Monte Carlo Method:
 ### Exploring Stars:
