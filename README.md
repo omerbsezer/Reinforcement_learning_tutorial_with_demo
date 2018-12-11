@@ -15,7 +15,9 @@ Machine learning mainly consists of three methods: Supervised Learning, Unsuperv
 ### Markov Decision Process:
 - It consists of five tuples: status, actions, rewards, state transition probability, discount factor.
 - Markov decision processes formally describe an environment for reinforcement learning.
-- ![mdps](https://user-images.githubusercontent.com/10358317/49738227-e95d3700-fc9f-11e8-8ad8-cec2267d4668.jpg) [David Silver Lecture Notes]
+- There are 3 techniques for solving MDPs: Dynamic Programming (DP) Learning, Monte Carlo (MC) Learning, Temporal Difference (TD) Learning.
+
+![mdps](https://user-images.githubusercontent.com/10358317/49738227-e95d3700-fc9f-11e8-8ad8-cec2267d4668.jpg) [David Silver Lecture Notes]
 
 
 #### Markov Property:
@@ -95,6 +97,7 @@ A policy is the agent’s behaviour. It is a map from state to action.
 - DP uses full-width backups.
 - DP is effective for medium-sized problems (millions of states).
 - For large problems DP suffers Bellman’s curse of dimensionality. 
+- Disadvantage of DP: requires full model of environment, never learns from experience.
 
 ### Policy Iteration (with Pseudocode):
 - Policy Iteration consists of 2 main step: 1.Policy Evaluation, 2.Policy Iteration.
@@ -154,9 +157,10 @@ A policy is the agent’s behaviour. It is a map from state to action.
 - TD methods learn directly from episodes of experience.
 - TD updates a guess towards a guess
 - TD learns from incomplete episodes, by bootstrapping.
-- TD uses bootstrapping like DP, TD learns experience like MC.
+- TD uses bootstrapping like DP, TD learns experience like MC (combines MC and DP).
 
 ## MC - TD Difference:
+- MC and TD learn from experience.
 - TD can learn before knowing the final outcome.
 - TD can learn online after every step. MC must wait until end of episode before return is known.
 - TD can learn without the final outcome.
@@ -173,10 +177,25 @@ A policy is the agent’s behaviour. It is a map from state to action.
 ![mc-td-dp](https://user-images.githubusercontent.com/10358317/49806522-01e55400-fd69-11e8-92a6-9bff14bb4c80.jpg)
 [David Silver Lecture Notes]
 
-### SARSA:
-### Q-Learning:
+### SARSA (TD Control Problem, On-Policy):
+- In on-policy learning the Q(s,a) function is learned from actions, we took using our current policy π.
+
+![updatingwithsarsa](https://user-images.githubusercontent.com/10358317/49831282-8c977480-fda4-11e8-8c7b-473ad5040f9d.jpg)
+![sarsa-algo](https://user-images.githubusercontent.com/10358317/49831108-23affc80-fda4-11e8-84ca-08c6f1c056c5.jpg)
+
+
+
+### Q-Learning (TD Control Problem, Off-Policy):
+- Looks like SARSA, instead of choosing a' based on argmax of Q, Q(s,a) is updated directly with max over  Q(s',a')
+- In off-policy learning the Q(s,a) function is learned from different actions (for example, random actions). We even don't need a policy at all.
+
+![qfunction](https://user-images.githubusercontent.com/10358317/49831386-d41e0080-fda4-11e8-967e-dd184a4e07e5.jpg)
+
+![updatingwithqlearning](https://user-images.githubusercontent.com/10358317/49831118-26aaed00-fda4-11e8-9420-0ba120b1a509.jpg)
+![qlearning-algo](https://user-images.githubusercontent.com/10358317/49831121-29a5dd80-fda4-11e8-9a72-aee5c9781950.jpg)
 
 ## Function Approximation:
+- Tabulated Q may not fit memory 
 
 ## Open AI Gym:
 
