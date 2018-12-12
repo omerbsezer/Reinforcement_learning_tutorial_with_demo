@@ -195,7 +195,22 @@ A policy is the agent’s behaviour. It is a map from state to action.
 ![qlearning-algo](https://user-images.githubusercontent.com/10358317/49831121-29a5dd80-fda4-11e8-9a72-aee5c9781950.jpg)
 
 ## Function Approximation:
-- Tabulated Q may not fit memory 
+- Reinforcement learning can be used to solve large problems, e.g Backgammon:  10<sup>20</sup> states; Computer Go:  10<sup>170</sup> states; Helicopter: continuous state space.
+- So far we have represented value function by a lookup table, Every state s has an entry V(s) or every state-action pair s,
+a has an entry Q(s,a).
+- There are too many states and/or actions to store in memory. It is too slow to learn the value of each state individually. Tabulated Q may not fit memory.
+- Solution for large MDPs:
+
+![func-appr](https://user-images.githubusercontent.com/10358317/49852371-fb042300-fdf4-11e8-8d15-1b77eb1c2fda.jpg)
+
+- Differentiable function approximators can be used: Linear combinations of features, Neural Networks.
+
+![value-func-appr](https://user-images.githubusercontent.com/10358317/49852598-a3b28280-fdf5-11e8-8a6d-c958136ca744.jpg)
+
+![func-appr2](https://user-images.githubusercontent.com/10358317/49852876-66022980-fdf6-11e8-9820-380c39b280d0.jpg)
+
+### Feature Vector:
+![feature-vectors](https://user-images.githubusercontent.com/10358317/49852662-d2c8f400-fdf5-11e8-9550-5cf87360e964.jpg)
 
 ## Open AI Gym:
 
@@ -205,7 +220,18 @@ A policy is the agent’s behaviour. It is a map from state to action.
 ## Actor-Critic:
 - Model Free Algorithm.
 
-## Deep Q Learning:
+## Deep Q Learning (Deep Q-Networks: DQN):
+- Gradient descent is simple and appealing. But it is not sample efficient.
+- Batch methods seek to find the best fitting value function.
+- Given the agent’s experience (“training data”)
+
+### Experience Replay:
+![dqn-experience-replay](https://user-images.githubusercontent.com/10358317/49853044-fa6c8c00-fdf6-11e8-94be-27a32fad21a2.jpg)
+
+### DQN in Atari:
+-V. Mnih, K. Kavukcuoglu, D. Silver, A. Graves, I. Antonoglou, et al. “Playing Atari with Deep Reinforcement Learning”. (2013)
+
+![dqn-in-atari](https://user-images.githubusercontent.com/10358317/49853048-fb9db900-fdf6-11e8-862d-d93acddceecf.jpg)
 
 ## Imitation Learning:
 
