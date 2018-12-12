@@ -282,6 +282,21 @@ Disadvantages:
 
 ![dyna-arch](https://user-images.githubusercontent.com/10358317/49874603-f90b8580-fe2f-11e8-9dc4-e85ec9caeaca.jpg)
 
+### Dyna-Q Algorithm:
+![dynaq](https://user-images.githubusercontent.com/10358317/49874998-fbbaaa80-fe30-11e8-8f0f-b266c22df8f8.jpg)
+
+### Sim-Based Search:
+![sim-based-search](https://user-images.githubusercontent.com/10358317/49875256-9dda9280-fe31-11e8-8e5c-598f1929b843.jpg)
+
+### MC-Tree-Search:
+- AlphaGo- Supervised learning + policy gradients + value functions + Monte Carlo tree search D. Silver, A. Huang, C. J.Maddison, A. Guez, L. Sifre, et al. “Mastering the game of Go with deep neural networks and tree search”. Nature (2016).
+- Highly selective best-first search.
+- Evaluates states dynamically (unlike e.g.  DP).
+- Uses sampling to break curse of dimensionality.
+- Computationally efficient, anytime, parallelisable.
+- Works for “black-box” models (only requires samples).
+![mc-tree-search](https://user-images.githubusercontent.com/10358317/49875372-e6924b80-fe31-11e8-828b-58472a106e43.jpg)
+
 ## Deep Q Learning (Deep Q-Networks: DQN):
 - Gradient descent is simple and appealing. But it is not sample efficient.
 - Batch methods seek to find the best fitting value function.
