@@ -325,10 +325,21 @@ Disadvantages:
 ![dqn-in-atari](https://user-images.githubusercontent.com/10358317/49853048-fb9db900-fdf6-11e8-862d-d93acddceecf.jpg)
 
 ## Imitation Learning:
+- Video: https://www.youtube.com/watch?time_continue=1&v=WjFdD7PDGw0
+- Presentation PDF: https://drive.google.com/file/d/12QdNmMll-bGlSWnm8pmD_TawuRN7xagX/view
+- Given: demonstrations or demonstrator.
+- Goal: train a policy to mimic demonstrations.
+
+### Behaviour Cloning:
+
+### Inverse RL: 
+
+### Learning From Demonstration:
+
+### One-Shot Imitation Learning:
+- Video: https://www.youtube.com/watch?v=oMZwkIjZzCM
 
 ## Meta-Learning:
-
-## Inverse RL: 
 
 ## Deep RL: 
 
@@ -345,9 +356,6 @@ https://sites.google.com/view/deep-rl-bootcamp/lectures
 
 
 
-Udemy:
-
-Udacity:
 
 ## Papers:
 - Q-Learning: V.  Mnih, K. Kavukcuoglu, D. Silver, A. Graves, I. Antonoglou, et al. “Playing Atari with Deep Reinforcement Learning”. (2013).
@@ -360,4 +368,8 @@ Udacity:
 
 ## References:
 - Sutton & Barto Book: Reinforcement Learning: An Introduction
-- David Silver Lecture Notes: (http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)
+- David Silver RL Lecture Notes: (http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)
+- Imitation Learning: https://sites.google.com/view/icml2018-imitation-learning/
+- Udemy: https://www.udemy.com/artificial-intelligence-reinforcement-learning-in-python/
+- Udemy: https://www.udemy.com/deep-reinforcement-learning-in-python/
+- Meta Learning: http://rail.eecs.berkeley.edu/deeprlcourse-fa17/f17docs/lecture_16_meta_learning.pdf
