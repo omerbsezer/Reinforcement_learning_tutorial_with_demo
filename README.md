@@ -258,6 +258,30 @@ Disadvantages:
 ### Action-Value Actor-Critic:
 ![action-value-actor-critic](https://user-images.githubusercontent.com/10358317/49869936-fe160800-fe22-11e8-8324-0f54c2d08680.jpg)
 
+![advantage_func](https://user-images.githubusercontent.com/10358317/49873385-c744ef80-fe2c-11e8-9f09-f074b00f9ee3.jpg)
+
+- The advantage function can significantly reduce variance of policy gradient.
+- So the critic should really estimate the advantage function.
+
+### Different Policy Gradients: 
+![policy-gradient-summary](https://user-images.githubusercontent.com/10358317/49873726-a335de00-fe2d-11e8-9181-67b8c00e1bc3.jpg)
+
+## Model-Based RL:
+![model-based-rl](https://user-images.githubusercontent.com/10358317/49874052-7e8e3600-fe2e-11e8-8c43-c554def10652.jpg)
+
+![model-based-rl2](https://user-images.githubusercontent.com/10358317/49874157-ce6cfd00-fe2e-11e8-9551-b9d26fc760fb.jpg)
+
+- Favourite planning algorithms: Value iteration,Policy iteration,Tree search,etc..
+- Sample-based Modeling: A simple but powerful approach to planning. Use the model only to generate samples. Sample experience from model.
+- Apply model-free RL to samples, e.g.: Monte-Carlo control, SARSA, Q-Learning.
+- Model-based RL is only as good as the estimated model.
+- When the model is inaccurate, planning process will compute a suboptimal policy: 1.when model is wrong, use model-free RL; 2.reason explicitly about model uncertainty.
+
+### Real and Simulated Experience:
+![real-simulated-exp](https://user-images.githubusercontent.com/10358317/49874473-a29e4700-fe2f-11e8-8685-e3baee5e626d.jpg)
+
+![dyna-arch](https://user-images.githubusercontent.com/10358317/49874603-f90b8580-fe2f-11e8-9dc4-e85ec9caeaca.jpg)
+
 ## Deep Q Learning (Deep Q-Networks: DQN):
 - Gradient descent is simple and appealing. But it is not sample efficient.
 - Batch methods seek to find the best fitting value function.
