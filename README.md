@@ -212,13 +212,44 @@ a has an entry Q(s,a).
 ### Feature Vector:
 ![feature-vectors](https://user-images.githubusercontent.com/10358317/49852662-d2c8f400-fdf5-11e8-9550-5cf87360e964.jpg)
 
-## Open AI Gym:
+## Open AI Gym Environment:
 
 ## Policy Gradient:
-- Model Free Algorithm.
+- DP, MC and TD Learning methods are value-based methods (Learnt Value Function, Implicit policy).
+- In value-based methods, a policy was generated directly from the value function (e.g. using epsilon-greedy)
+- In policy-based, we will directly parametrise the policy ( π<sub>θ</sub>(s,a) =P[a|s,θ) ).
+- Policy Gradient method is a policy-based method (No Value Function, Learnt Policy).
+
+![policy-based](https://user-images.githubusercontent.com/10358317/49868713-47fcef00-fe1f-11e8-97d8-cb0b15f2c3eb.jpg)
+
+Advantages: 
+- Better convergence properties,
+- Effective in high-dimensional or continuous action spaces,
+- Can learn stochastic policies.
+
+Disadvantages:
+- Typically converge to a local rather than global optimum.
+- Evaluating a policy is typically inefficient and high variance.
+
+### Policy Objective Functions:
+- Policy based reinforcement learning is an optimisation problem.
+- Find θ that maximises J(θ).
+
+![policy-objective-func](https://user-images.githubusercontent.com/10358317/49869176-a7a7ca00-fe20-11e8-8152-07a3ae3d00d7.jpg)
+
+### Policy-Gradient:
+
+![policy-gradient](https://user-images.githubusercontent.com/10358317/49869270-ffdecc00-fe20-11e8-9e2a-2811a3e1ecf0.jpg)
+
+![score-function](https://user-images.githubusercontent.com/10358317/49869466-80053180-fe21-11e8-81b5-2cd4ef740609.jpg)
+
+![policy-gradient-theorem](https://user-images.githubusercontent.com/10358317/49869560-cb1f4480-fe21-11e8-87eb-7ce93930038b.jpg)
+
+### Monte-Carlo Policy Gradient (REINFORCE):
+![reinforce](https://user-images.githubusercontent.com/10358317/49869620-f1dd7b00-fe21-11e8-8023-a3de70e2cbbb.jpg)
 
 ## Actor-Critic:
-- Model Free Algorithm.
+- Actor-Critic method is a policy-based method (Learnt Value Function, Learnt Policy).
 
 ## Deep Q Learning (Deep Q-Networks: DQN):
 - Gradient descent is simple and appealing. But it is not sample efficient.
