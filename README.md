@@ -251,6 +251,13 @@ Disadvantages:
 ## Actor-Critic:
 - Actor-Critic method is a policy-based method (Learnt Value Function, Learnt Policy).
 
+![actor-critique-intro](https://user-images.githubusercontent.com/10358317/49869844-b5f6e580-fe22-11e8-9a7d-974ea2147ba0.jpg)
+
+- The critic is solving a familiar problem: policy evaluation.
+
+### Action-Value Actor-Critic:
+![action-value-actor-critic](https://user-images.githubusercontent.com/10358317/49869936-fe160800-fe22-11e8-8324-0f54c2d08680.jpg)
+
 ## Deep Q Learning (Deep Q-Networks: DQN):
 - Gradient descent is simple and appealing. But it is not sample efficient.
 - Batch methods seek to find the best fitting value function.
