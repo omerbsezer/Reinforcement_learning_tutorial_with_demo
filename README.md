@@ -74,8 +74,8 @@ A policy is the agent’s behaviour. It is a map from state to action.
 ### Exploration and Exploitation:
 - Reinforcement learning is like trial-and-error learning.
 - The agent should discover a good policy.
-- Exploration finds more information about the environment.
-- Exploitation exploits known information to maximise reward
+- Exploration finds more information about the environment (Gather more information).
+- Exploitation exploits known information to maximise reward (Make the best decision given current information).
 
 ### Prediction & Control Problem (Pattern of RL algorithms):
 - Prediction: evaluate the future (Finding value given a policy).
@@ -296,6 +296,20 @@ Disadvantages:
 - Computationally efficient, anytime, parallelisable.
 - Works for “black-box” models (only requires samples).
 ![mc-tree-search](https://user-images.githubusercontent.com/10358317/49875372-e6924b80-fe31-11e8-828b-58472a106e43.jpg)
+
+### Temporal-Difference Search:
+- Simulation-based search.
+- Using TD instead of MC (bootstrapping).
+- MC tree search applies MC control to sub-MDP from now.
+- TD search applies Sarsa to sub-MDP from now.
+- For simulation-based search, bootstrapping is also helpful.
+- TD search is usually more efficient than MC search.
+- TD(λ) search can be much more efficient than MC search.
+
+![td-search](https://user-images.githubusercontent.com/10358317/49876106-a92ebd80-fe33-11e8-8459-bd38158edaad.jpg)
+
+### RL in Games:
+![rl-in-games](https://user-images.githubusercontent.com/10358317/49876417-65888380-fe34-11e8-80d9-c50a84b3a1a2.jpg)
 
 ## Deep Q Learning (Deep Q-Networks: DQN):
 - Gradient descent is simple and appealing. But it is not sample efficient.
