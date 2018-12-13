@@ -357,13 +357,27 @@ https://sites.google.com/view/deep-rl-bootcamp/lectures
 
 
 
-## Papers:
-- Q-Learning: V.  Mnih, K. Kavukcuoglu, D. Silver, A. Graves, I. Antonoglou, et al. “Playing Atari with Deep Reinforcement Learning”. (2013).
-- Policy Gradient: J. Schulman, S. Levine, P. Moritz, M. I. Jordan, and P.  Abbeel. “Trust Region Policy Optimization”. (2015).
-- Policy Gradient: V. Mnih, A. P. Badia, M. Mirza, A. Graves, T. P. Lillicrap, et al. “Asynchronous methods for deep reinforcement learning”. (2016).
-- Robots-Guided policy search: S. Levine*, C. Finn*, T. Darrell, P. Abbeel. “End-to-end training of deep visuomotor policies”. (2015).
-- Robots-Q-Learning: D. Kalashnikov et al. “QT-Opt: Scalable Deep Reinforcement Learning for Vision-Based Robotic Manipulation”. (2018)
-- AlphaGo- Supervised learning + policy gradients + value functions + Monte Carlo tree search D. Silver, A. Huang, C. J.Maddison, A. Guez, L. Sifre, et al. “Mastering the game of Go with deep neural networks and tree search”. Nature (2016).
+## Important RL Papers:
+- Q-Learning: V.  Mnih, K. Kavukcuoglu, D. Silver, A. Graves, I. Antonoglou, et al. [“Playing Atari with Deep Reinforcement Learning”](https://arxiv.org/pdf/1312.5602.pdf). (2013).
+- V.  Mnih, K. Kavukcuoglu, D. Silver, et al. ["Human-level control through deep reinforcement learning"](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf) (Nature-2015).
+- Hasselt et al. ["Rainbow: Combining Improvements in Deep Reinforcement Learning"](https://arxiv.org/pdf/1710.02298.pdf) (2017).
+- Hasselt et al. ["Deep Reinforcement Learning with Double Q-learning"](https://arxiv.org/pdf/1509.06461.pdf) (2015).
+- Schaul et al. ["Prioritized Experience Replay"](https://arxiv.org/pdf/1511.05952.pdf) (2015).
+- Wang et al. ["Dueling Network Architectures for Deep Reinforcement Learning"](http://proceedings.mlr.press/v48/wangf16.pdf) (2016).
+- Fortunato et al. ["Noisy networks for exploration"](https://arxiv.org/pdf/1706.10295.pdf)(ICLR-2018).
+- Sutton et al. ["Policy Gradient methods for reinforcement learning with function approximation"](https://papers.nips.cc/paper/1713-policy-gradient-methods-for-reinforcement-learning-with-function-approximation.pdf)
+- Policy Gradient: V. Mnih et al, ["Asynchronous Methods for Deep Reinforcement Learning"](https://arxiv.org/pdf/1602.01783.pdf) (2016).
+- Policy Gradient: Schulman et al. ["Trust Region Policy Optimization"](https://arxiv.org/pdf/1502.05477.pdf) (2017).
+- Schulma et al. ["Proximal Policy Optimization Algorithms"](https://arxiv.org/pdf/1707.06347.pdf)(2017).
+- Such et al. ["Deep Neuroevolution: Genetic Algorithms are a Competitive Alternative for
+Training Deep Neural Networks for Reinforcement Learning"](https://arxiv.org/pdf/1712.06567.pdf)(2018).
+- Salimans et al. ["Evolution Strategies as a Scalable Alternative to Reinforcement Learning"](https://arxiv.org/pdf/1703.03864.pdf) (2017).
+- Weber et al. ["Imagination-Augmented Agents for Deep Reinforcement Learning"](https://arxiv.org/pdf/1707.06203.pdf) (2018).
+- Jaderberg et al. ["Reinforcement learning with unsupervised auxiliary tasks"](https://arxiv.org/pdf/1611.05397.pdf) (2016).
+- Nagaband et al. ["Neural Network Dynamics for Model-Based Deep Reinforcement Learning with Model-Free Fine-Tuning"](https://arxiv.org/pdf/1708.02596.pdf)(2017)
+- Robots-Guided policy search: S. Levine et al. [“End-to-end training of deep visuomotor policies”](https://arxiv.org/pdf/1504.00702.pdf). (2015).
+- Robots-Q-Learning: D. Kalashnikov et al. [“QT-Opt: Scalable Deep Reinforcement Learning for Vision-Based Robotic Manipulation”](https://arxiv.org/pdf/1806.10293.pdf) (2018).
+- AlphaGo- Supervised learning + policy gradients + value functions + Monte Carlo tree search D. Silver, A. Huang, C. J.Maddison, A. Guez, L. Sifre, et al. [“Mastering the game of Go with deep neural networks and tree search”](https://www.nature.com/articles/nature16961). Nature (2016).
 
 
 ## References:
