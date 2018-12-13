@@ -328,10 +328,11 @@ Disadvantages:
 - Video: https://www.youtube.com/watch?time_continue=1&v=WjFdD7PDGw0
 - Presentation PDF: https://drive.google.com/file/d/12QdNmMll-bGlSWnm8pmD_TawuRN7xagX/view
 - Given: demonstrations or demonstrator.
-- Goal: train a policy to mimic demonstrations.
+- Goal: train a policy to mimic demonstrations (mimicking human behavior).
+- Pretraining model with human demonstrator’s data, it might avoid undesirable situations and make the training process faster.
 
 ### Behaviour Cloning:
-
+- Simple, Efficient, 
 ### Inverse RL: 
 
 ### Learning From Demonstration:
