@@ -263,6 +263,9 @@ Disadvantages:
 - The advantage function can significantly reduce variance of policy gradient.
 - So the critic should really estimate the advantage function.
 
+### Actor-critic algorithm: A3C
+![a3c](https://user-images.githubusercontent.com/10358317/49952868-ec5d5f00-ff0d-11e8-83b1-e5bb4df41ae5.jpg)
+
 ### Different Policy Gradients: 
 ![policy-gradient-summary](https://user-images.githubusercontent.com/10358317/49873726-a335de00-fe2d-11e8-9181-67b8c00e1bc3.jpg)
 
@@ -330,17 +333,33 @@ Disadvantages:
 - Given: demonstrations or demonstrator.
 - Goal: train a policy to mimic demonstrations (mimicking human behavior).
 - Pretraining model with human demonstrator’s data, it might avoid undesirable situations and make the training process faster.
+- Behavior Cloning, Inverse RL, Learning from demonstration are the sub domain of the imitation learning.
 
-### Behaviour Cloning:
-- Simple, Efficient, 
-### Inverse RL: 
+![imitation-learning1](https://user-images.githubusercontent.com/10358317/49951502-22e5aa80-ff0b-11e8-9534-109e4499c265.jpg)
 
-### Learning From Demonstration:
+![imitation-learning2](https://user-images.githubusercontent.com/10358317/49951508-237e4100-ff0b-11e8-846f-5ff2c81b1fb7.jpg)
+
+### Dagger: Dataset Aggregation:
+Paper: https://www.cs.cmu.edu/~sross1/publications/Ross-AIStats11-NoRegret.pdf
+
+![dagger](https://user-images.githubusercontent.com/10358317/49951510-24af6e00-ff0b-11e8-9ab6-06d949669a0e.jpg)
+
+### PLATO: Policy Learning with Adaptive Trajectory Optimization:
+- Kahn et al. ["PLATO: Policy Learning withAdaptive Trajectory Optimization"](https://arxiv.org/pdf/1603.00622.pdf) (2017)
+
+![plato](https://user-images.githubusercontent.com/10358317/49951787-d2228180-ff0b-11e8-8c3e-386f57db782f.jpg)
 
 ### One-Shot Imitation Learning:
 - Video: https://www.youtube.com/watch?v=oMZwkIjZzCM
 
 ## Meta-Learning:
+- Meta-learning = learning to learn
+- Supervised meta-learning = supervised learning with datapoints that are entire datasets
+- If we can meta-learn a faster reinforcement learner, we can learn new tasks efficiently!
+- What can a  meta-learned learner do differently? 1.Explore more intelligently, 2.Avoid trying actions that are know to be useless, 3.Acquire the right features more quickly.
+- The promise of meta-learning: use past experience to simply acquire a much more efficient deep RL algorithm
+
+![meta-learning](https://user-images.githubusercontent.com/10358317/49952518-22e6aa00-ff0d-11e8-9008-43a459fae82d.jpg)
 
 ## Deep RL: 
 
@@ -379,6 +398,7 @@ Training Deep Neural Networks for Reinforcement Learning"](https://arxiv.org/pdf
 - Robots-Guided policy search: S. Levine et al. [“End-to-end training of deep visuomotor policies”](https://arxiv.org/pdf/1504.00702.pdf). (2015).
 - Robots-Q-Learning: D. Kalashnikov et al. [“QT-Opt: Scalable Deep Reinforcement Learning for Vision-Based Robotic Manipulation”](https://arxiv.org/pdf/1806.10293.pdf) (2018).
 - AlphaGo- Supervised learning + policy gradients + value functions + Monte Carlo tree search D. Silver, A. Huang, C. J.Maddison, A. Guez, L. Sifre, et al. [“Mastering the game of Go with deep neural networks and tree search”](https://www.nature.com/articles/nature16961). Nature (2016).
+- Kahn et al. ["PLATO: Policy Learning withAdaptive Trajectory Optimization"](https://arxiv.org/pdf/1603.00622.pdf) (2017)
 
 
 ## References:
@@ -388,3 +408,4 @@ Training Deep Neural Networks for Reinforcement Learning"](https://arxiv.org/pdf
 - Udemy: https://www.udemy.com/artificial-intelligence-reinforcement-learning-in-python/
 - Udemy: https://www.udemy.com/deep-reinforcement-learning-in-python/
 - Meta Learning: http://rail.eecs.berkeley.edu/deeprlcourse-fa17/f17docs/lecture_16_meta_learning.pdf
+
