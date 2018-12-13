@@ -349,12 +349,12 @@ Disadvantages:
 
 
 ## Resources:
-Free Lectures:
-http://rail.eecs.berkeley.edu/deeprlcourse/
 
-https://sites.google.com/view/deep-rl-bootcamp/lectures
-
-
+- [Deep Reinforcement Learning from Berkeley](http://rail.eecs.berkeley.edu/deeprlcourse/) , [Video](https://www.youtube.com/playlist?list=PLkFD6_40KJIznC9CDbVTjAF2oyt8_VAe3)
+- [Deep RL Bootcamp](https://sites.google.com/view/deep-rl-bootcamp/lectures)
+- [GroundAI on RL](https://www.groundai.com/?text=reinforcement+learning): Papers on reinforcement learning
+- [David Silver RL Lecture Notes](http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)
+- [Awesome RL - Github](https://github.com/aikorea/awesome-rl)
 
 
 ## Important RL Papers:
