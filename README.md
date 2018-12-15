@@ -82,7 +82,8 @@ A policy is the agent’s behaviour. It is a map from state to action.
 - Control: optimise the future (Finding optimal/best policy).
 
 ## Grid World:
-- Grid World is a game for demonstration. 12 positions, 11 states, 4 actions. Our aim is to find optimal policy. 
+- Grid World is a game for demonstration. 12 positions, 11 states, 4 actions. Our aim is to find optimal policy.
+- Demo Code: [gridWorldGame.py](https://github.com/omerbsezer/rl-tutorial-with-demo/blob/master/gridWorldGame.py)
 
 ![grid-world](https://user-images.githubusercontent.com/10358317/49739821-d77d9300-fca3-11e8-893d-af7690d114b2.jpg)
 
@@ -100,6 +101,7 @@ A policy is the agent’s behaviour. It is a map from state to action.
 - Disadvantage of DP: requires full model of environment, never learns from experience.
 
 ### Policy Iteration (with Pseudocode):
+- Demo Code: [policy_iteration_demo.ipynb](https://github.com/omerbsezer/rl-tutorial-with-demo/blob/master/policy_iteration_demo.ipynb)
 - Policy Iteration consists of 2 main step: 1.Policy Evaluation, 2.Policy Iteration.
 
 ![policy iteration](https://user-images.githubusercontent.com/10358317/49740185-bf5a4380-fca4-11e8-80a4-fdc8dce8e349.jpg) [David Silver Lecture Notes]
@@ -126,6 +128,7 @@ A policy is the agent’s behaviour. It is a map from state to action.
 ![value-iteration](https://user-images.githubusercontent.com/10358317/49805004-1de6f680-fd65-11e8-95b8-a3c224fbbe53.jpg)
 
 ## Monte Carlo (MC) Method:
+- Demo Code: [monte_carlo_demo.ipynb](https://github.com/omerbsezer/rl-tutorial-with-demo/blob/master/monte_carlo_demo.ipynb)
 - MC methods learn directly from episodes of experience.
 - MC is model-free :  no knowledge of MDP transitions / rewards.
 - MC uses the simplest possible idea: value = mean return.
@@ -134,6 +137,7 @@ A policy is the agent’s behaviour. It is a map from state to action.
 - First Visit MC: The first time-step t that state s is visited in an episode.
 - Every Visit MC: Every time-step t that state s is visited in an episode.
 
+
 ### MC Calculating Returns (with Pseudocode):
 ![mc-calculating-returns](https://user-images.githubusercontent.com/10358317/49827998-cca62980-fd9b-11e8-999b-150aac525870.jpg)
 
@@ -141,6 +145,7 @@ A policy is the agent’s behaviour. It is a map from state to action.
 ![first-visit-mc](https://user-images.githubusercontent.com/10358317/49827884-73d69100-fd9b-11e8-9623-16890aa3bbcb.jpg)
 
 ### Exploring-Starts (with Pseudocode) (MC Control Problem):
+- Demo Code: [monte_carlo_es_demo.ipynb](https://github.com/omerbsezer/rl-tutorial-with-demo/blob/master/monte_carlo_es_demo.ipynb)
 - State s and Action a is randomly selected for all starting points.
 - Use Q instead of V 
 - Update the policy after every episode, keep updating the same Q in-place.
@@ -148,12 +153,14 @@ A policy is the agent’s behaviour. It is a map from state to action.
 ![mc-control1](https://user-images.githubusercontent.com/10358317/49828847-fbbd9a80-fd9d-11e8-9286-dee68c6fa1a2.jpg)
 
 ### MC Epsilon Greedy (without Exploring Starts):
+- Demo Code: [monte_carlo_epsilon_greedy_demo.ipynb](https://github.com/omerbsezer/rl-tutorial-with-demo/blob/master/monte_carlo_epsilon_greedy_demo.ipynb)
 - MC Exploring start is infeasible, because in real problems we can not calculate all edge cases (ex: in self-driving car problem, we can not calculate all cases).
 - Randomly selection for all starting points in code is removed.
 - Change policy to sometimes be random.
 - This random policy is Epsilon-Greedy (like multi-armed bandit problem)
 
 ## Temporal Difference (TD) Learning Method:
+- Demo Code: [td0_prediction.ipynb](https://github.com/omerbsezer/rl-tutorial-with-demo/blob/master/td_prediction.ipynb)
 - TD methods learn directly from episodes of experience.
 - TD updates a guess towards a guess
 - TD learns from incomplete episodes, by bootstrapping.
@@ -178,6 +185,7 @@ A policy is the agent’s behaviour. It is a map from state to action.
 [David Silver Lecture Notes]
 
 ### SARSA (TD Control Problem, On-Policy):
+- Demo Code: [SARSA_demo.ipynb](https://github.com/omerbsezer/rl-tutorial-with-demo/blob/master/SARSA_demo.ipynb)
 - In on-policy learning the Q(s,a) function is learned from actions, we took using our current policy π.
 
 ![updatingwithsarsa](https://user-images.githubusercontent.com/10358317/49831282-8c977480-fda4-11e8-8c7b-473ad5040f9d.jpg)
@@ -186,6 +194,7 @@ A policy is the agent’s behaviour. It is a map from state to action.
 
 
 ### Q-Learning (TD Control Problem, Off-Policy):
+- Demo Code: [q_learning_demo.ipynb](https://github.com/omerbsezer/rl-tutorial-with-demo/blob/master/q_learning_demo.ipynb)
 - Looks like SARSA, instead of choosing a' based on argmax of Q, Q(s,a) is updated directly with max over  Q(s',a')
 - In off-policy learning the Q(s,a) function is learned from different actions (for example, random actions). We even don't need a policy at all.
 
@@ -195,6 +204,7 @@ A policy is the agent’s behaviour. It is a map from state to action.
 ![qlearning-algo](https://user-images.githubusercontent.com/10358317/49831121-29a5dd80-fda4-11e8-9a72-aee5c9781950.jpg)
 
 ## Function Approximation:
+- Demo Code: [func_approx_q_learning_demo.ipynb](https://github.com/omerbsezer/rl-tutorial-with-demo/blob/master/func_approx_q_learning_demo.ipynb)
 - Reinforcement learning can be used to solve large problems, e.g Backgammon:  10<sup>20</sup> states; Computer Go:  10<sup>170</sup> states; Helicopter: continuous state space.
 - So far we have represented value function by a lookup table, Every state s has an entry V(s) or every state-action pair s,
 a has an entry Q(s,a).
