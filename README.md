@@ -190,7 +190,7 @@ A policy is the agent’s behaviour. It is a map from state to action.
 
 ![updatingwithsarsa](https://user-images.githubusercontent.com/10358317/49831282-8c977480-fda4-11e8-8c7b-473ad5040f9d.jpg)
 ![sarsa-algo](https://user-images.githubusercontent.com/10358317/49831108-23affc80-fda4-11e8-84ca-08c6f1c056c5.jpg)
-
+[David Silver Lecture Notes]
 
 
 ### Q-Learning (TD Control Problem, Off-Policy):
@@ -202,6 +202,7 @@ A policy is the agent’s behaviour. It is a map from state to action.
 
 ![updatingwithqlearning](https://user-images.githubusercontent.com/10358317/49831118-26aaed00-fda4-11e8-9420-0ba120b1a509.jpg)
 ![qlearning-algo](https://user-images.githubusercontent.com/10358317/49831121-29a5dd80-fda4-11e8-9a72-aee5c9781950.jpg)
+[David Silver Lecture Notes]
 
 ## Function Approximation:
 - Demo Code: [func_approx_q_learning_demo.ipynb](https://github.com/omerbsezer/rl-tutorial-with-demo/blob/master/func_approx_q_learning_demo.ipynb)
@@ -218,14 +219,17 @@ a has an entry Q(s,a).
 ![value-func-appr](https://user-images.githubusercontent.com/10358317/49852598-a3b28280-fdf5-11e8-8a6d-c958136ca744.jpg)
 
 ![func-appr2](https://user-images.githubusercontent.com/10358317/49852876-66022980-fdf6-11e8-9820-380c39b280d0.jpg)
+[David Silver Lecture Notes]
 
 ### Feature Vector:
 ![feature-vectors](https://user-images.githubusercontent.com/10358317/49852662-d2c8f400-fdf5-11e8-9550-5cf87360e964.jpg)
+[David Silver Lecture Notes]
 
 ## Open AI Gym Environment:
 - Gym Framework is developed by OpenAI to simulate environments for RL problems (https://gym.openai.com/)
 - Gym Q-learning Cart Pole implementation source code: https://github.com/omerbsezer/QLearning_CartPole
 - Gym Q-learning Mountain Car implementation source code: https://github.com/omerbsezer/Qlearning_MountainCar
+
 ![gym](https://user-images.githubusercontent.com/10358317/50048143-b2d75000-00d5-11e9-85a5-93083ac9cd74.jpg)
 
 
@@ -252,6 +256,7 @@ Disadvantages:
 - Find θ that maximises J(θ).
 
 ![policy-objective-func](https://user-images.githubusercontent.com/10358317/49869176-a7a7ca00-fe20-11e8-8152-07a3ae3d00d7.jpg)
+[David Silver Lecture Notes]
 
 ### Policy-Gradient:
 - Demo Code: [Pong_Game_Policy Gradient Implementation Using Gym and Tensorflow
@@ -262,14 +267,17 @@ Disadvantages:
 ![score-function](https://user-images.githubusercontent.com/10358317/49869466-80053180-fe21-11e8-81b5-2cd4ef740609.jpg)
 
 ![policy-gradient-theorem](https://user-images.githubusercontent.com/10358317/49869560-cb1f4480-fe21-11e8-87eb-7ce93930038b.jpg)
+[David Silver Lecture Notes]
 
 ### Monte-Carlo Policy Gradient (REINFORCE):
 ![reinforce](https://user-images.githubusercontent.com/10358317/49869620-f1dd7b00-fe21-11e8-8023-a3de70e2cbbb.jpg)
+[David Silver Lecture Notes]
 
 ## Actor-Critic:
 - Actor-Critic method is a policy-based method (Learnt Value Function, Learnt Policy).
 
 ![actor-critique-intro](https://user-images.githubusercontent.com/10358317/49869844-b5f6e580-fe22-11e8-9a7d-974ea2147ba0.jpg)
+[David Silver Lecture Notes]
 
 - The critic is solving a familiar problem: policy evaluation.
 
@@ -277,6 +285,7 @@ Disadvantages:
 ![action-value-actor-critic](https://user-images.githubusercontent.com/10358317/49869936-fe160800-fe22-11e8-8324-0f54c2d08680.jpg)
 
 ![advantage_func](https://user-images.githubusercontent.com/10358317/49873385-c744ef80-fe2c-11e8-9f09-f074b00f9ee3.jpg)
+[David Silver Lecture Notes]
 
 - The advantage function can significantly reduce variance of policy gradient.
 - So the critic should really estimate the advantage function.
@@ -286,11 +295,13 @@ Disadvantages:
 
 ### Different Policy Gradients: 
 ![policy-gradient-summary](https://user-images.githubusercontent.com/10358317/49873726-a335de00-fe2d-11e8-9181-67b8c00e1bc3.jpg)
+[David Silver Lecture Notes]
 
 ## Model-Based RL:
 ![model-based-rl](https://user-images.githubusercontent.com/10358317/49874052-7e8e3600-fe2e-11e8-8c43-c554def10652.jpg)
 
 ![model-based-rl2](https://user-images.githubusercontent.com/10358317/49874157-ce6cfd00-fe2e-11e8-9551-b9d26fc760fb.jpg)
+[David Silver Lecture Notes]
 
 - Favourite planning algorithms: Value iteration,Policy iteration,Tree search,etc..
 - Sample-based Modeling: A simple but powerful approach to planning. Use the model only to generate samples. Sample experience from model.
@@ -302,12 +313,15 @@ Disadvantages:
 ![real-simulated-exp](https://user-images.githubusercontent.com/10358317/49874473-a29e4700-fe2f-11e8-8685-e3baee5e626d.jpg)
 
 ![dyna-arch](https://user-images.githubusercontent.com/10358317/49874603-f90b8580-fe2f-11e8-9dc4-e85ec9caeaca.jpg)
+[David Silver Lecture Notes]
 
 ### Dyna-Q Algorithm:
 ![dynaq](https://user-images.githubusercontent.com/10358317/49874998-fbbaaa80-fe30-11e8-8f0f-b266c22df8f8.jpg)
+[David Silver Lecture Notes]
 
 ### Sim-Based Search:
 ![sim-based-search](https://user-images.githubusercontent.com/10358317/49875256-9dda9280-fe31-11e8-8e5c-598f1929b843.jpg)
+[David Silver Lecture Notes]
 
 ### MC-Tree-Search:
 - AlphaGo- Supervised learning + policy gradients + value functions + Monte Carlo tree search D. Silver, A. Huang, C. J.Maddison, A. Guez, L. Sifre, et al. “Mastering the game of Go with deep neural networks and tree search”. Nature (2016).
@@ -316,7 +330,9 @@ Disadvantages:
 - Uses sampling to break curse of dimensionality.
 - Computationally efficient, anytime, parallelisable.
 - Works for “black-box” models (only requires samples).
+
 ![mc-tree-search](https://user-images.githubusercontent.com/10358317/49875372-e6924b80-fe31-11e8-828b-58472a106e43.jpg)
+[David Silver Lecture Notes]
 
 ### Temporal-Difference Search:
 - Simulation-based search.
@@ -328,9 +344,11 @@ Disadvantages:
 - TD(λ) search can be much more efficient than MC search.
 
 ![td-search](https://user-images.githubusercontent.com/10358317/49876106-a92ebd80-fe33-11e8-8459-bd38158edaad.jpg)
+[David Silver Lecture Notes]
 
 ### RL in Games:
 ![rl-in-games](https://user-images.githubusercontent.com/10358317/49876417-65888380-fe34-11e8-80d9-c50a84b3a1a2.jpg)
+[David Silver Lecture Notes]
 
 ## Deep Q Learning (Deep Q-Networks: DQN):
 - Gradient descent is simple and appealing. But it is not sample efficient.
@@ -379,7 +397,6 @@ Paper: https://www.cs.cmu.edu/~sross1/publications/Ross-AIStats11-NoRegret.pdf
 
 ![meta-learning](https://user-images.githubusercontent.com/10358317/49952518-22e6aa00-ff0d-11e8-9008-43a459fae82d.jpg)
 
-## Deep RL: 
 
 ## POMDPs (Partial Observable MDP): 
 ![pomdps](https://user-images.githubusercontent.com/10358317/49738014-5c19e280-fc9f-11e8-8ca6-fe8fbeb0a5df.jpg)
@@ -423,7 +440,7 @@ Training Deep Neural Networks for Reinforcement Learning"](https://arxiv.org/pdf
 - Sutton & Barto Book: Reinforcement Learning: An Introduction
 - David Silver RL Lecture Notes: (http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)
 - Imitation Learning: https://sites.google.com/view/icml2018-imitation-learning/
-- Udemy: https://www.udemy.com/artificial-intelligence-reinforcement-learning-in-python/
-- Udemy: https://www.udemy.com/deep-reinforcement-learning-in-python/
+- Udemy: https://www.udemy.com/artificial-intelligence-reinforcement-learning-in-python/ (Codes are adapted from this course)
+- Udemy: https://www.udemy.com/deep-reinforcement-learning-in-python/ 
 - Meta Learning: http://rail.eecs.berkeley.edu/deeprlcourse-fa17/f17docs/lecture_16_meta_learning.pdf
 
