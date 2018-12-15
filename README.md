@@ -223,6 +223,12 @@ a has an entry Q(s,a).
 ![feature-vectors](https://user-images.githubusercontent.com/10358317/49852662-d2c8f400-fdf5-11e8-9550-5cf87360e964.jpg)
 
 ## Open AI Gym Environment:
+- Gym Framework is developed by OpenAI to simulate environments for RL problems (https://gym.openai.com/)
+- Gym Q-learning Cart Pole implementation source code: https://github.com/omerbsezer/QLearning_CartPole
+- Gym Q-learning Mountain Car implementation source code: https://github.com/omerbsezer/Qlearning_MountainCar
+![gym](https://user-images.githubusercontent.com/10358317/50048143-b2d75000-00d5-11e9-85a5-93083ac9cd74.jpg)
+
+
 
 ## Policy Gradient:
 - DP, MC and TD Learning methods are value-based methods (Learnt Value Function, Implicit policy).
@@ -248,6 +254,8 @@ Disadvantages:
 ![policy-objective-func](https://user-images.githubusercontent.com/10358317/49869176-a7a7ca00-fe20-11e8-8152-07a3ae3d00d7.jpg)
 
 ### Policy-Gradient:
+- Demo Code: [Pong_Game_Policy Gradient Implementation Using Gym and Tensorflow
+](https://github.com/omerbsezer/PolicyGradient_PongGame)
 
 ![policy-gradient](https://user-images.githubusercontent.com/10358317/49869270-ffdecc00-fe20-11e8-9e2a-2811a3e1ecf0.jpg)
 
