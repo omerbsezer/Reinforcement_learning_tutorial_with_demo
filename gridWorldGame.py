@@ -1,3 +1,4 @@
+# Adapted from: https://github.com/lazyprogrammer/machine_learning_examples/tree/master/rl
 import numpy as np
 
 class Grid: # Environment
