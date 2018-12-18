@@ -508,7 +508,7 @@ Training Deep Neural Networks for Reinforcement Learning"](https://arxiv.org/pdf
 - Sutton & Barto Book: Reinforcement Learning: An Introduction
 - David Silver RL Lecture Notes: (http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)
 - Imitation Learning: https://sites.google.com/view/icml2018-imitation-learning/
-- Udemy: https://www.udemy.com/artificial-intelligence-reinforcement-learning-in-python/ (Codes are adapted from this course)
+- Udemy: https://www.udemy.com/artificial-intelligence-reinforcement-learning-in-python/ 
 - Udemy: https://www.udemy.com/deep-reinforcement-learning-in-python/ 
 - Meta Learning: http://rail.eecs.berkeley.edu/deeprlcourse-fa17/f17docs/lecture_16_meta_learning.pdf
 
