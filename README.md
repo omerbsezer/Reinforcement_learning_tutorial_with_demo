@@ -62,7 +62,7 @@ There are many RL tutorials, courses, papers in the internet. This one summarize
     - [Dagger: Dataset Aggregation](#Dagger)
     - [PLATO: Policy Learning with Adaptive Trajectory Optimization](#PLATO)
     - [One-Shot Imitation Learning](#OneShotImitation)
-  - [Meta-Learning] (#MetaLearning)
+  - [Meta-Learning](#MetaLearning)
   - [POMDPs (Partial Observable MDP)](#POMDPs)
   - [Resources](#Resources)
   - [Important RL Papers](#ImportantRLPapers)
