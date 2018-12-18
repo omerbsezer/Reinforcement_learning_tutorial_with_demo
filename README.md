@@ -478,6 +478,7 @@ Paper: https://www.cs.cmu.edu/~sross1/publications/Ross-AIStats11-NoRegret.pdf
 - [GroundAI on RL](https://www.groundai.com/?text=reinforcement+learning): Papers on reinforcement learning
 - [David Silver RL Lecture Notes](http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)
 - [Awesome RL - Github](https://github.com/aikorea/awesome-rl)
+- [Free Deep RL Course](https://simoninithomas.github.io/Deep_reinforcement_learning_Course/)
 
 
 ## Important RL Papers <a name="ImportantRLPapers"></a>:
