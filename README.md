@@ -1,5 +1,5 @@
 # Reinforcement Learning (RL) Tutorial
-There are many RL tutorials, courses, papers in the internet. This one summarizes all of the tutorials, courses, and some of the RL papers with demonstration of RL algorithms. It will continue to be updated over time
+There are many RL tutorials, courses, papers in the internet. This one summarizes all of the RL tutorials, RL courses, and some of the important RL papers including sample code of RL algorithms. It will continue to be updated over time.
 
 **Keywords:** Dynamic Programming (Policy and Value Iteration), Monte Carlo, Temporal Difference (SARSA, QLearning), Approximation, Policy Gradient, DQN, Imitation Learning, Meta-Learning, RL papers, RL courses, etc.
 
