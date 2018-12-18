@@ -1,9 +1,9 @@
 # Reinforcement Learning (RL) Tutorial
-Machine learning mainly consists of three methods: Supervised Learning, Unsupervised Learning and Reinforcement Learning. Supervised Learning provides mapping functionality between input and output using labelled dataset. Some of the supervised learning methods: Linear Regression, Support Vector Machines, Neural Networks, etc. Unsupervised Learning provides grouping and clustering functionality. Some of the supervised learning methods: K-Means, DBScan, etc. Reinforcement Learning is different from supervised and unsupervised learning. RL provides behaviour learning. 
+There are many RL tutorials, courses, papers in the internet. This one summarizes all of the tutorials, courses, and some of the RL papers with demonstration of RL algorithms. It will continue to be updated over time
 
-**Keywords:** Dynamic Programming (Policy and Value Iteration), Monte Carlo, Temporal Difference (SARSA, QLearning), Approximation, Policy Gradient, DQN.
+**Keywords:** Dynamic Programming (Policy and Value Iteration), Monte Carlo, Temporal Difference (SARSA, QLearning), Approximation, Policy Gradient, DQN, Imitation Learning, Meta-Learning, RL papers, RL courses, etc.
 
-**NOTE: There are many tutorials in the internet. This one summarizes all of the tutorials with demo of RL algorithms.**
+**NOTE: This tutorial is only for education purpose. It is not academic study/paper. All related references are listed at the end of the file.**
 
 # Table of Contents
 1. [What is RL](#whatisRL)
@@ -27,10 +27,9 @@ Machine learning mainly consists of three methods: Supervised Learning, Unsuperv
     .....
     
 
-## This is the introduction <a name="introduction"></a>
-Some introduction text, formatted in heading 2 style
-
 ## What is RL? <a name="whatisRL"></a>
+Machine learning mainly consists of three methods: Supervised Learning, Unsupervised Learning and Reinforcement Learning. Supervised Learning provides mapping functionality between input and output using labelled dataset. Some of the supervised learning methods: Linear Regression, Support Vector Machines, Neural Networks, etc. Unsupervised Learning provides grouping and clustering functionality. Some of the supervised learning methods: K-Means, DBScan, etc. Reinforcement Learning is different from supervised and unsupervised learning. RL provides behaviour learning. 
+
 "A reinforcement learning algorithm, or agent, learns by interacting with its environment. The agent receives rewards by performing correctly and penalties for performing incorrectly. The agent learns without intervention from a human by maximizing its reward and minimizing its penalty" [*](https://www.techopedia.com/definition/32055/reinforcement-learning). RL agents are used in different applications: Robotics, self driving cars, playing atari games, managing investment portfolio, control problems. I am believing that like many AI laboratories do, reinforcement learning with deep learning will be a core technology in the future.
 
 
