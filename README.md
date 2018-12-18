@@ -5,11 +5,15 @@ Machine learning mainly consists of three methods: Supervised Learning, Unsuperv
 
 **NOTE: There are many tutorials in the internet. This one summarizes all of the tutorials with demo of RL algorithms.**
 
-# Table of contents
+# Table of Contents
 1. [What is RL](#whatisRL)
 2. [Markov Decision Process](#mdp)
     1. [Markov Property](#markovproperty)
 3. [RL Components](#RLcomponents)
+    1.[Rewards] (#Rewards)
+    2.[State Transition Probability](#State Transition Probability)
+    3.[Discount Factor](#Discount Factor)
+
 
 ## This is the introduction <a name="introduction"></a>
 Some introduction text, formatted in heading 2 style
@@ -34,12 +38,12 @@ A state S<sub>t</sub> is Markov if and only if P[S<sub>t+1</sub>|S<sub>t</sub>] 
 
 
 ## RL Components <a name="RLcomponents"></a>:
-### Rewards:
+### Rewards <a name="Rewards"></a>:
 - A reward Rt is a scalar feedback signal.
 - The agent’s job is to maximise cumulative reward
-### State Transition Probability:
+### State Transition Probability <a name="State Transition Probability"></a>:
 - p(s′,r|s,a).=  Pr{S<sub>t</sub>=s′,R<sub>t</sub>=r|S<sub>t-1</sub>=s,A<sub>t−1</sub>=a},
-### Discount Factor:
+### Discount Factor <a name="Discount Factor"></a>:
 - The discount γ∈[0,1] is the present value of future rewards.
 ### Return:
 - The return G<sub>t</sub> is the total discounted reward from time-step t.
