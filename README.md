@@ -13,7 +13,19 @@ Machine learning mainly consists of three methods: Supervised Learning, Unsuperv
     1. [Rewards](#Rewards)
     2. [State Transition Probability](#StateTransitionProbability)
     3. [Discount Factor](#DiscountFactor)
-
+    4. [Return](#Return)
+    5. [Value Function](#ValueFunction)
+    6. [Policy](#Policy)
+    7. [State-Value Function](#StateValueFunction)
+    8. [Action-Value Function](#ActionValueFunction)
+    9. [Planning vs RL](#PlanningRL)
+    10. [Exploration and Exploitation](#ExplorationandExploitation)
+    11. [Prediction & Control Problem](#PredictionControlProblem)
+4. [Grid World](#GridWorld)
+5. [Dynamic Programming Method (DP)](#DP)
+    1. [Policy Iteration](#PolicyIteration)
+    .....
+    
 
 ## This is the introduction <a name="introduction"></a>
 Some introduction text, formatted in heading 2 style
@@ -45,12 +57,13 @@ A state S<sub>t</sub> is Markov if and only if P[S<sub>t+1</sub>|S<sub>t</sub>] 
 - p(s′,r|s,a).=  Pr{S<sub>t</sub>=s′,R<sub>t</sub>=r|S<sub>t-1</sub>=s,A<sub>t−1</sub>=a},
 ### Discount Factor <a name="DiscountFactor"></a>:
 - The discount γ∈[0,1] is the present value of future rewards.
-### Return:
+### Return <a name="Return"></a>:
 - The return G<sub>t</sub> is the total discounted reward from time-step t.
 
 ![return](https://user-images.githubusercontent.com/10358317/49737029-c9784400-fc9c-11e8-8e05-23e6d7bb9fd0.jpg)
 [David Silver Lecture Notes]
-### Value Function:
+
+### Value Function <a name="ValueFunction"></a>:
 - Value function is a prediction of future reward. How good is each state and/or action.
 - The value function v(s) gives the long-term value of state s
 - V<sub>π</sub>(s) =E<sub>π</sub>[R<sub>t+1</sub>+γR<sub>t+2</sub>+γ<sup>2</sup>R<sub>t+3</sub>+...|S<sub>t</sub>=s]
@@ -58,22 +71,23 @@ A state S<sub>t</sub> is Markov if and only if P[S<sub>t+1</sub>|S<sub>t</sub>] 
 
 ![value_function](https://user-images.githubusercontent.com/10358317/49737276-7eaafc00-fc9d-11e8-83ad-e21feec25c16.jpg)
 [David Silver Lecture Notes]
-### Policy (π): 
+
+### Policy (π) <a name="Policy"></a>:
 A policy is the agent’s behaviour. It is a map from state to action. 
 - Deterministic policy: a=π(s).
 - Stochastic policy: π(a|s) =P[A<sub>t</sub>=a|S<sub>t</sub>=s].
-### State-Value Function:
+### State-Value Function <a name="StateValueFunction"></a>:
 ![state-value](https://user-images.githubusercontent.com/10358317/49737548-3b9d5880-fc9e-11e8-8549-d868556f0569.jpg)
 [David Silver Lecture Notes]
-### Action-Value Function: 
+### Action-Value Function <a name="ActionValueFunction"></a>:
 ![action- value](https://user-images.githubusercontent.com/10358317/49737562-448e2a00-fc9e-11e8-9e57-8c04649b9a99.jpg)
 [David Silver Lecture Notes]
 
-### Optimal Value Functions:
+### Optimal Value Functions <a name="OptimalValueFunction"></a>:
 ![optimal-value](https://user-images.githubusercontent.com/10358317/49737868-f3cb0100-fc9e-11e8-82f8-f718f2af6b51.jpg)
 [David Silver Lecture Notes]
 
-### Planning vs RL:
+### Planning vs RL <a name="PlanningRL"></a>:
 #### Planning:
 - Rules of the game are known.
 - A model of the environment is known.
@@ -84,17 +98,17 @@ A policy is the agent’s behaviour. It is a map from state to action.
 - The agent interacts with the environment.
 - The agent improves its policy.
 
-### Exploration and Exploitation:
+### Exploration and Exploitation <a name="ExplorationandExploitation"></a>:
 - Reinforcement learning is like trial-and-error learning.
 - The agent should discover a good policy.
 - Exploration finds more information about the environment (Gather more information).
 - Exploitation exploits known information to maximise reward (Make the best decision given current information).
 
-### Prediction & Control Problem (Pattern of RL algorithms):
+### Prediction & Control Problem (Pattern of RL algorithms) <a name="PredictionControlProblem"></a>:
 - Prediction: evaluate the future (Finding value given a policy).
 - Control: optimise the future (Finding optimal/best policy).
 
-## Grid World:
+## Grid World <a name="GridWorld"></a>:
 - Grid World is a game for demonstration. 12 positions, 11 states, 4 actions. Our aim is to find optimal policy.
 - Demo Code: [gridWorldGame.py](https://github.com/omerbsezer/rl-tutorial-with-demo/blob/master/gridWorldGame.py)
 
@@ -102,7 +116,7 @@ A policy is the agent’s behaviour. It is a map from state to action.
 
 ![optimal-policy-grid](https://user-images.githubusercontent.com/10358317/49739871-f714bb80-fca3-11e8-93c3-43a72284b7ba.jpg)
 
-## Dynamic Programming Method (DP): Full Model
+## Dynamic Programming Method (DP): Full Model <a name="DP"></a>:
 - Dynamic Programming is a very general solution method for problems which have two properties:
 1.Optimal substructure, 2.Overlapping subproblems.
 - Markov decision processes satisfy both properties. Bellman equation gives recursive decomposition. Value function stores and reuses solutions.
@@ -113,7 +127,7 @@ A policy is the agent’s behaviour. It is a map from state to action.
 - For large problems DP suffers Bellman’s curse of dimensionality. 
 - Disadvantage of DP: requires full model of environment, never learns from experience.
 
-### Policy Iteration (with Pseudocode):
+### Policy Iteration (with Pseudocode) <a name="PolicyIteration"></a>:
 - Demo Code: [policy_iteration_demo.ipynb](https://github.com/omerbsezer/rl-tutorial-with-demo/blob/master/policy_iteration_demo.ipynb)
 - Policy Iteration consists of 2 main step: 1.Policy Evaluation, 2.Policy Iteration.
 
