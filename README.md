@@ -38,12 +38,37 @@ There are many RL tutorials, courses, papers in the internet. This one summarize
     - [SARSA (TD Control Problem, On-Policy)](#SARSA)
     - [Q-Learning (TD Control Problem, Off-Policy)](#Qlearning)
   - [Function Approximation](#FunctionApproximation)
-    .....
-
-
-
-
--------
+    - [Feature Vector](#FeatureVector)
+  - [Open AI Gym Environment](#OpenAIGym)
+  - [Policy-Based Methods](#PolicyBased)
+    - [Policy Objective Functions](#PolicyObjectiveFunctions)
+    - [Policy-Gradient](PolicyGradient)
+    - [Monte-Carlo Policy Gradient (REINFORCE)](#REINFORCE)
+  - [Actor-Critic](#ActorCritic)
+    - [Action-Value Actor-Critic](#ActorValueActorCritic)
+    - [Actor-Critic Algorithm:A3C](#A3C)
+    - [Different Policy Gradients](#DifferentPolicyGradients)
+  - [Model-Based RL](ModelBasedRL)
+    - [Real and Simulated Experience](#RealandSimulatedExperience)
+    - [Dyna-Q Algorithm](#DynaQ)
+    - [Sim-Based Search](#SimBased)
+    - [MC-Tree-Search](#MCTreeSearch)
+    - [Temporal-Difference Search](#TemporalDifferenceSearch)
+    - [RL in Games](#RLinGames)
+  - [Deep Q Learning (Deep Q-Networks: DQN)](#DQN)
+    - [Experience Replay](#ExperienceReplay)
+    - [DQN in Atari](#DQNAtari)
+  - [Imitation Learning](#ImitationLearning)
+    - [Dagger: Dataset Aggregation](#Dagger)
+    - [PLATO: Policy Learning with Adaptive Trajectory Optimization](#PLATO)
+    - [One-Shot Imitation Learning](#OneShotImitation)
+  - [Meta-Learning] (#MetaLearning)
+  - [POMDPs (Partial Observable MDP)](#POMDPs)
+  - [Resources](#Resources)
+  - [Important RL Papers](#ImportantRLPapers)
+  - [References](#References)
+    
+  
 ## What is RL? <a name="whatisRL"></a>
 Machine learning mainly consists of three methods: Supervised Learning, Unsupervised Learning and Reinforcement Learning. Supervised Learning provides mapping functionality between input and output using labelled dataset. Some of the supervised learning methods: Linear Regression, Support Vector Machines, Neural Networks, etc. Unsupervised Learning provides grouping and clustering functionality. Some of the supervised learning methods: K-Means, DBScan, etc. Reinforcement Learning is different from supervised and unsupervised learning. RL provides behaviour learning. 
 
