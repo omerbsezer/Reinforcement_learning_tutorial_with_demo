@@ -6,26 +6,35 @@ There are many RL tutorials, courses, papers in the internet. This one summarize
 **NOTE: This tutorial is only for education purpose. It is not academic study/paper. All related references are listed at the end of the file.**
 
 # Table of Contents
-1. [What is RL](#whatisRL)
-2. [Markov Decision Process](#mdp)
-    1. [Markov Property](#markovproperty)
-3. [RL Components](#RLcomponents)
-    1. [Rewards](#Rewards)
-    2. [State Transition Probability](#StateTransitionProbability)
-    3. [Discount Factor](#DiscountFactor)
-    4. [Return](#Return)
-    5. [Value Function](#ValueFunction)
-    6. [Policy](#Policy)
-    7. [State-Value Function](#StateValueFunction)
-    8. [Action-Value Function](#ActionValueFunction)
-    9. [Planning vs RL](#PlanningRL)
-    10. [Exploration and Exploitation](#ExplorationandExploitation)
-    11. [Prediction & Control Problem](#PredictionControlProblem)
-4. [Grid World](#GridWorld)
-5. [Dynamic Programming Method (DP)](#DP)
-    1. [Policy Iteration](#PolicyIteration)
+- [What is Reinforcement Learning?](#whatisRL)
+- [Markov Decision Process](#mdp)
+    - [Markov Property](#markovproperty)
+- [RL Components](#RLcomponents)
+    - [Rewards](#Rewards)
+    - [State Transition Probability](#StateTransitionProbability)
+    - [Discount Factor](#DiscountFactor)
+    - [Return](#Return)
+    - [Value Function](#ValueFunction)
+    - [Policy](#Policy)
+    - [State-Value Function](#StateValueFunction)
+    - [Action-Value Function](#ActionValueFunction)
+    - [Planning vs RL](#PlanningRL)
+    - [Exploration and Exploitation](#ExplorationandExploitation)
+    - [Prediction & Control Problem](#PredictionControlProblem)
+- [Grid World](#GridWorld)
+- [Dynamic Programming Method (DP)](#DP)
+    - [Policy Iteration](#PolicyIteration)
+        - [Policy Evaluation](#PolicyEvaluation)
+        - [Policy Improvement](#PolicyImprovement)
+    - [Value Iteration](#ValueIteration)
+ - [Monte Carlo (MC) Method](#MonteCarlo)
+    - [MC Calculating Returns](#MCCalculatingReturns)
+    - [First-Visit MC](#FirstVisitMC)
+    - [MC Exploring-Starts](#MCExploringStarts)
+    - [MC Epsilon Greedy](#MCEpsilonGreedy)
+  - [Temporal Difference (TD) Learning Method](#TDLearning)
     .....
-    
+   
 
 ## What is RL? <a name="whatisRL"></a>
 Machine learning mainly consists of three methods: Supervised Learning, Unsupervised Learning and Reinforcement Learning. Supervised Learning provides mapping functionality between input and output using labelled dataset. Some of the supervised learning methods: Linear Regression, Support Vector Machines, Neural Networks, etc. Unsupervised Learning provides grouping and clustering functionality. Some of the supervised learning methods: K-Means, DBScan, etc. Reinforcement Learning is different from supervised and unsupervised learning. RL provides behaviour learning. 
@@ -135,17 +144,17 @@ A policy is the agent’s behaviour. It is a map from state to action.
 ![policy-iteration](https://user-images.githubusercontent.com/10358317/49804775-871a3a00-fd64-11e8-90da-9550bcd1175c.jpg)
 
 
-#### Policy Evaluation (with Pseudocode):
+#### Policy Evaluation (with Pseudocode) <a name="PolicyEvaluation"></a>:
 - Problem:  evaluate a given policy π.
 - Solution: iterative application of Bellman expectation backup.
 - v1 → v2→ ... → vπ.
 
 ![iterative-policy-evaluation](https://user-images.githubusercontent.com/10358317/49739932-1d3a5b80-fca4-11e8-962f-26348b323c63.jpg)
 
-#### Policy Improvement:
+#### Policy Improvement <a name="PolicyImprovement"></a>:
 ![policy-improvement](https://user-images.githubusercontent.com/10358317/49804622-14a95a00-fd64-11e8-9ae0-932af77bbc0c.jpg)
 
-### Value Iteration (with Pseudocode):
+### Value Iteration (with Pseudocode) <a name="ValueIteration"></a>:
 - Policy iteration has 2 inner loop. However, value iteration has a better solution.
 - It combines policy evaluation and policy improvement into one step.
 - Problem:  find optimal policy π.
@@ -153,7 +162,7 @@ A policy is the agent’s behaviour. It is a map from state to action.
 
 ![value-iteration](https://user-images.githubusercontent.com/10358317/49805004-1de6f680-fd65-11e8-95b8-a3c224fbbe53.jpg)
 
-## Monte Carlo (MC) Method:
+## Monte Carlo (MC) Method <a name="MonteCarlo"></a>:
 - Demo Code: [monte_carlo_demo.ipynb](https://github.com/omerbsezer/rl-tutorial-with-demo/blob/master/monte_carlo_demo.ipynb)
 - MC methods learn directly from episodes of experience.
 - MC is model-free :  no knowledge of MDP transitions / rewards.
@@ -164,13 +173,13 @@ A policy is the agent’s behaviour. It is a map from state to action.
 - Every Visit MC: Every time-step t that state s is visited in an episode.
 
 
-### MC Calculating Returns (with Pseudocode):
+### MC Calculating Returns (with Pseudocode) <a name="MCCalculatingReturns"></a>:
 ![mc-calculating-returns](https://user-images.githubusercontent.com/10358317/49827998-cca62980-fd9b-11e8-999b-150aac525870.jpg)
 
-### First-Visit MC (with Pseudocode) (MC Prediction Problem):
+### First-Visit MC (with Pseudocode) (MC Prediction Problem) <a name="FirstVisitMC"></a>:
 ![first-visit-mc](https://user-images.githubusercontent.com/10358317/49827884-73d69100-fd9b-11e8-9623-16890aa3bbcb.jpg)
 
-### Exploring-Starts (with Pseudocode) (MC Control Problem):
+### MC Exploring-Starts (with Pseudocode) (MC Control Problem) <a name="MCExploringStarts"></a>:
 - Demo Code: [monte_carlo_es_demo.ipynb](https://github.com/omerbsezer/rl-tutorial-with-demo/blob/master/monte_carlo_es_demo.ipynb)
 - State s and Action a is randomly selected for all starting points.
 - Use Q instead of V 
@@ -178,21 +187,21 @@ A policy is the agent’s behaviour. It is a map from state to action.
 
 ![mc-control1](https://user-images.githubusercontent.com/10358317/49828847-fbbd9a80-fd9d-11e8-9286-dee68c6fa1a2.jpg)
 
-### MC Epsilon Greedy (without Exploring Starts):
+### MC Epsilon Greedy (without Exploring Starts) <a name="MCEpsilonGreedy"></a>:
 - Demo Code: [monte_carlo_epsilon_greedy_demo.ipynb](https://github.com/omerbsezer/rl-tutorial-with-demo/blob/master/monte_carlo_epsilon_greedy_demo.ipynb)
 - MC Exploring start is infeasible, because in real problems we can not calculate all edge cases (ex: in self-driving car problem, we can not calculate all cases).
 - Randomly selection for all starting points in code is removed.
 - Change policy to sometimes be random.
 - This random policy is Epsilon-Greedy (like multi-armed bandit problem)
 
-## Temporal Difference (TD) Learning Method:
+## Temporal Difference (TD) Learning Method <a name="TDLearning"></a>:
 - Demo Code: [td0_prediction.ipynb](https://github.com/omerbsezer/rl-tutorial-with-demo/blob/master/td_prediction.ipynb)
 - TD methods learn directly from episodes of experience.
 - TD updates a guess towards a guess
 - TD learns from incomplete episodes, by bootstrapping.
 - TD uses bootstrapping like DP, TD learns experience like MC (combines MC and DP).
 
-## MC - TD Difference:
+## MC - TD Difference <a name="MCTDDifference"></a>:
 - MC and TD learn from experience.
 - TD can learn before knowing the final outcome.
 - TD can learn online after every step. MC must wait until end of episode before return is known.
@@ -206,11 +215,11 @@ A policy is the agent’s behaviour. It is a map from state to action.
 ![mc-td-dif3](https://user-images.githubusercontent.com/10358317/49810084-758b5f00-fd71-11e8-8b67-b1d8da52e45a.jpg)
 [David Silver Lecture Notes]
 
-## MC - TD - DP Difference in Visual:
+## MC - TD - DP Difference in Visual <a name="MCTDDifferenceinVisual"></a>:
 ![mc-td-dp](https://user-images.githubusercontent.com/10358317/49806522-01e55400-fd69-11e8-92a6-9bff14bb4c80.jpg)
 [David Silver Lecture Notes]
 
-### SARSA (TD Control Problem, On-Policy):
+### SARSA (TD Control Problem, On-Policy) <a name="SARSA"></a>:
 - Demo Code: [SARSA_demo.ipynb](https://github.com/omerbsezer/rl-tutorial-with-demo/blob/master/SARSA_demo.ipynb)
 - In on-policy learning the Q(s,a) function is learned from actions, we took using our current policy π.
 
@@ -219,7 +228,7 @@ A policy is the agent’s behaviour. It is a map from state to action.
 [David Silver Lecture Notes]
 
 
-### Q-Learning (TD Control Problem, Off-Policy):
+### Q-Learning (TD Control Problem, Off-Policy) <a name="Qlearning"></a>:
 - Demo Code: [q_learning_demo.ipynb](https://github.com/omerbsezer/rl-tutorial-with-demo/blob/master/q_learning_demo.ipynb)
 - Looks like SARSA, instead of choosing a' based on argmax of Q, Q(s,a) is updated directly with max over  Q(s',a')
 - In off-policy learning the Q(s,a) function is learned from different actions (for example, random actions). We even don't need a policy at all.
@@ -230,7 +239,7 @@ A policy is the agent’s behaviour. It is a map from state to action.
 ![qlearning-algo](https://user-images.githubusercontent.com/10358317/49831121-29a5dd80-fda4-11e8-9a72-aee5c9781950.jpg)
 [David Silver Lecture Notes]
 
-## Function Approximation:
+## Function Approximation <a name="FunctionApproximation"></a>:
 - Demo Code: [func_approx_q_learning_demo.ipynb](https://github.com/omerbsezer/rl-tutorial-with-demo/blob/master/func_approx_q_learning_demo.ipynb)
 - Reinforcement learning can be used to solve large problems, e.g Backgammon:  10<sup>20</sup> states; Computer Go:  10<sup>170</sup> states; Helicopter: continuous state space.
 - So far we have represented value function by a lookup table, Every state s has an entry V(s) or every state-action pair s,
