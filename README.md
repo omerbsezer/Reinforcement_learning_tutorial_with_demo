@@ -5,14 +5,23 @@ Machine learning mainly consists of three methods: Supervised Learning, Unsuperv
 
 **NOTE: There are many tutorials in the internet. This one summarizes all of the tutorials with demo of RL algorithms.**
 
-## What is RL?
+# Table of contents
+1. [What is RL](#whatisRL)
+2. [Markov Decision Process](#mdp)
+    1. [Markov Property](#markovproperty)
+3. [RL Components](#RLcomponents)
+
+## This is the introduction <a name="introduction"></a>
+Some introduction text, formatted in heading 2 style
+
+## What is RL? <a name="whatisRL"></a>
 "A reinforcement learning algorithm, or agent, learns by interacting with its environment. The agent receives rewards by performing correctly and penalties for performing incorrectly. The agent learns without intervention from a human by maximizing its reward and minimizing its penalty" [*](https://www.techopedia.com/definition/32055/reinforcement-learning). RL agents are used in different applications: Robotics, self driving cars, playing atari games, managing investment portfolio, control problems. I am believing that like many AI laboratories do, reinforcement learning with deep learning will be a core technology in the future.
 
 
 ![rl-agent-env](https://user-images.githubusercontent.com/10358317/49733000-71881000-fc91-11e8-89ab-503775f44d32.jpg) 
 [Sutton & Barto Book: RL: An Introduction]
 
-### Markov Decision Process:
+## Markov Decision Process <a name="mdp"></a>:
 - It consists of five tuples: status, actions, rewards, state transition probability, discount factor.
 - Markov decision processes formally describe an environment for reinforcement learning.
 - There are 3 techniques for solving MDPs: Dynamic Programming (DP) Learning, Monte Carlo (MC) Learning, Temporal Difference (TD) Learning.
@@ -20,11 +29,11 @@ Machine learning mainly consists of three methods: Supervised Learning, Unsuperv
 ![mdps](https://user-images.githubusercontent.com/10358317/49738227-e95d3700-fc9f-11e8-8ad8-cec2267d4668.jpg) [David Silver Lecture Notes]
 
 
-#### Markov Property:
+### Markov Property <a name="markovproperty"></a>:
 A state S<sub>t</sub> is Markov if and only if P[S<sub>t+1</sub>|S<sub>t</sub>] =P[S<sub>t+1</sub>|S<sub>1</sub>,...,S<sub>t</sub>]
 
 
-## RL Components:
+## RL Components <a name="RLcomponents"></a>:
 ### Rewards:
 - A reward Rt is a scalar feedback signal.
 - The agent’s job is to maximise cumulative reward
