@@ -33,9 +33,17 @@ There are many RL tutorials, courses, papers in the internet. This one summarize
     - [MC Exploring-Starts](#MCExploringStarts)
     - [MC Epsilon Greedy](#MCEpsilonGreedy)
   - [Temporal Difference (TD) Learning Method](#TDLearning)
+    - [MC - TD Difference](#MCTDDifference)
+    - [MC - TD - DP Difference in Visual](#MCTDDifferenceinVisual)
+    - [SARSA (TD Control Problem, On-Policy)](#SARSA)
+    - [Q-Learning (TD Control Problem, Off-Policy)](#Qlearning)
+  - [Function Approximation](#FunctionApproximation)
     .....
-   
 
+
+
+
+-------
 ## What is RL? <a name="whatisRL"></a>
 Machine learning mainly consists of three methods: Supervised Learning, Unsupervised Learning and Reinforcement Learning. Supervised Learning provides mapping functionality between input and output using labelled dataset. Some of the supervised learning methods: Linear Regression, Support Vector Machines, Neural Networks, etc. Unsupervised Learning provides grouping and clustering functionality. Some of the supervised learning methods: K-Means, DBScan, etc. Reinforcement Learning is different from supervised and unsupervised learning. RL provides behaviour learning. 
 
@@ -201,7 +209,7 @@ A policy is the agent’s behaviour. It is a map from state to action.
 - TD learns from incomplete episodes, by bootstrapping.
 - TD uses bootstrapping like DP, TD learns experience like MC (combines MC and DP).
 
-## MC - TD Difference <a name="MCTDDifference"></a>:
+### MC - TD Difference <a name="MCTDDifference"></a>:
 - MC and TD learn from experience.
 - TD can learn before knowing the final outcome.
 - TD can learn online after every step. MC must wait until end of episode before return is known.
@@ -215,7 +223,7 @@ A policy is the agent’s behaviour. It is a map from state to action.
 ![mc-td-dif3](https://user-images.githubusercontent.com/10358317/49810084-758b5f00-fd71-11e8-8b67-b1d8da52e45a.jpg)
 [David Silver Lecture Notes]
 
-## MC - TD - DP Difference in Visual <a name="MCTDDifferenceinVisual"></a>:
+### MC - TD - DP Difference in Visual <a name="MCTDDifferenceinVisual"></a>:
 ![mc-td-dp](https://user-images.githubusercontent.com/10358317/49806522-01e55400-fd69-11e8-92a6-9bff14bb4c80.jpg)
 [David Silver Lecture Notes]
 
@@ -256,11 +264,11 @@ a has an entry Q(s,a).
 ![func-appr2](https://user-images.githubusercontent.com/10358317/49852876-66022980-fdf6-11e8-9820-380c39b280d0.jpg)
 [David Silver Lecture Notes]
 
-### Feature Vector:
+### Feature Vector <a name="FeatureVector"></a>:
 ![feature-vectors](https://user-images.githubusercontent.com/10358317/49852662-d2c8f400-fdf5-11e8-9550-5cf87360e964.jpg)
 [David Silver Lecture Notes]
 
-## Open AI Gym Environment:
+## Open AI Gym Environment <a name="OpenAIGym"></a>:
 - Gym Framework is developed by OpenAI to simulate environments for RL problems (https://gym.openai.com/)
 - Gym Q-learning Cart Pole implementation source code: https://github.com/omerbsezer/QLearning_CartPole
 - Gym Q-learning Mountain Car implementation source code: https://github.com/omerbsezer/Qlearning_MountainCar
@@ -269,7 +277,7 @@ a has an entry Q(s,a).
 
 
 
-## Policy Gradient:
+## Policy-Based Methods <a name="PolicyBased"></a>:
 - DP, MC and TD Learning methods are value-based methods (Learnt Value Function, Implicit policy).
 - In value-based methods, a policy was generated directly from the value function (e.g. using epsilon-greedy)
 - In policy-based, we will directly parametrise the policy ( π<sub>θ</sub>(s,a) =P[a|s,θ) ).
@@ -286,14 +294,14 @@ Disadvantages:
 - Typically converge to a local rather than global optimum.
 - Evaluating a policy is typically inefficient and high variance.
 
-### Policy Objective Functions:
+### Policy Objective Functions <a name="PolicyObjectiveFunctions"></a>:
 - Policy based reinforcement learning is an optimisation problem.
 - Find θ that maximises J(θ).
 
 ![policy-objective-func](https://user-images.githubusercontent.com/10358317/49869176-a7a7ca00-fe20-11e8-8152-07a3ae3d00d7.jpg)
 [David Silver Lecture Notes]
 
-### Policy-Gradient:
+### Policy-Gradient <a name="PolicyGradient"></a>:
 - Demo Code: [Pong_Game_Policy Gradient Implementation Using Gym and Tensorflow
 ](https://github.com/omerbsezer/PolicyGradient_PongGame)
 
@@ -304,11 +312,11 @@ Disadvantages:
 ![policy-gradient-theorem](https://user-images.githubusercontent.com/10358317/49869560-cb1f4480-fe21-11e8-87eb-7ce93930038b.jpg)
 [David Silver Lecture Notes]
 
-### Monte-Carlo Policy Gradient (REINFORCE):
+### Monte-Carlo Policy Gradient (REINFORCE) <a name="REINFORCE"></a>:
 ![reinforce](https://user-images.githubusercontent.com/10358317/49869620-f1dd7b00-fe21-11e8-8023-a3de70e2cbbb.jpg)
 [David Silver Lecture Notes]
 
-## Actor-Critic:
+## Actor-Critic <a name="ActorCritic"></a>:
 - Actor-Critic method is a policy-based method (Learnt Value Function, Learnt Policy).
 
 ![actor-critique-intro](https://user-images.githubusercontent.com/10358317/49869844-b5f6e580-fe22-11e8-9a7d-974ea2147ba0.jpg)
@@ -316,7 +324,7 @@ Disadvantages:
 
 - The critic is solving a familiar problem: policy evaluation.
 
-### Action-Value Actor-Critic:
+### Action-Value Actor-Critic <a name="ActorValueActorCritic"></a>:
 ![action-value-actor-critic](https://user-images.githubusercontent.com/10358317/49869936-fe160800-fe22-11e8-8324-0f54c2d08680.jpg)
 
 ![advantage_func](https://user-images.githubusercontent.com/10358317/49873385-c744ef80-fe2c-11e8-9f09-f074b00f9ee3.jpg)
@@ -325,14 +333,14 @@ Disadvantages:
 - The advantage function can significantly reduce variance of policy gradient.
 - So the critic should really estimate the advantage function.
 
-### Actor-critic algorithm: A3C
+### Actor-critic algorithm: A3C <a name="A3C"></a>:
 ![a3c](https://user-images.githubusercontent.com/10358317/49952868-ec5d5f00-ff0d-11e8-83b1-e5bb4df41ae5.jpg)
 
-### Different Policy Gradients: 
+### Different Policy Gradients <a name="DifferentPolicyGradients"></a>: 
 ![policy-gradient-summary](https://user-images.githubusercontent.com/10358317/49873726-a335de00-fe2d-11e8-9181-67b8c00e1bc3.jpg)
 [David Silver Lecture Notes]
 
-## Model-Based RL:
+## Model-Based RL <a name="ModelBasedRL"></a>: 
 ![model-based-rl](https://user-images.githubusercontent.com/10358317/49874052-7e8e3600-fe2e-11e8-8c43-c554def10652.jpg)
 
 ![model-based-rl2](https://user-images.githubusercontent.com/10358317/49874157-ce6cfd00-fe2e-11e8-9551-b9d26fc760fb.jpg)
@@ -344,21 +352,21 @@ Disadvantages:
 - Model-based RL is only as good as the estimated model.
 - When the model is inaccurate, planning process will compute a suboptimal policy: 1.when model is wrong, use model-free RL; 2.reason explicitly about model uncertainty.
 
-### Real and Simulated Experience:
+### Real and Simulated Experience <a name="RealandSimulatedExperience"></a>: 
 ![real-simulated-exp](https://user-images.githubusercontent.com/10358317/49874473-a29e4700-fe2f-11e8-8685-e3baee5e626d.jpg)
 
 ![dyna-arch](https://user-images.githubusercontent.com/10358317/49874603-f90b8580-fe2f-11e8-9dc4-e85ec9caeaca.jpg)
 [David Silver Lecture Notes]
 
-### Dyna-Q Algorithm:
+### Dyna-Q Algorithm <a name="DynaQ"></a>: 
 ![dynaq](https://user-images.githubusercontent.com/10358317/49874998-fbbaaa80-fe30-11e8-8f0f-b266c22df8f8.jpg)
 [David Silver Lecture Notes]
 
-### Sim-Based Search:
+### Sim-Based Search <a name="SimBased"></a>: 
 ![sim-based-search](https://user-images.githubusercontent.com/10358317/49875256-9dda9280-fe31-11e8-8e5c-598f1929b843.jpg)
 [David Silver Lecture Notes]
 
-### MC-Tree-Search:
+### MC-Tree-Search <a name="MCTreeSearch"></a>:
 - AlphaGo- Supervised learning + policy gradients + value functions + Monte Carlo tree search D. Silver, A. Huang, C. J.Maddison, A. Guez, L. Sifre, et al. “Mastering the game of Go with deep neural networks and tree search”. Nature (2016).
 - Highly selective best-first search.
 - Evaluates states dynamically (unlike e.g.  DP).
@@ -369,7 +377,7 @@ Disadvantages:
 ![mc-tree-search](https://user-images.githubusercontent.com/10358317/49875372-e6924b80-fe31-11e8-828b-58472a106e43.jpg)
 [David Silver Lecture Notes]
 
-### Temporal-Difference Search:
+### Temporal-Difference Search <a name="TemporalDifferenceSearch"></a>:
 - Simulation-based search.
 - Using TD instead of MC (bootstrapping).
 - MC tree search applies MC control to sub-MDP from now.
@@ -381,24 +389,24 @@ Disadvantages:
 ![td-search](https://user-images.githubusercontent.com/10358317/49876106-a92ebd80-fe33-11e8-8459-bd38158edaad.jpg)
 [David Silver Lecture Notes]
 
-### RL in Games:
+### RL in Games <a name="RLinGames"></a>:
 ![rl-in-games](https://user-images.githubusercontent.com/10358317/49876417-65888380-fe34-11e8-80d9-c50a84b3a1a2.jpg)
 [David Silver Lecture Notes]
 
-## Deep Q Learning (Deep Q-Networks: DQN):
+## Deep Q Learning (Deep Q-Networks: DQN) <a name="DQN"></a>:
 - Gradient descent is simple and appealing. But it is not sample efficient.
 - Batch methods seek to find the best fitting value function.
 - Given the agent’s experience (“training data”)
 
-### Experience Replay:
+### Experience Replay <a name="ExperienceReplay"></a>:
 ![dqn-experience-replay](https://user-images.githubusercontent.com/10358317/49853044-fa6c8c00-fdf6-11e8-94be-27a32fad21a2.jpg)
 
-### DQN in Atari:
+### DQN in Atari <a name="DQNAtari"></a>:
 -V. Mnih, K. Kavukcuoglu, D. Silver, A. Graves, I. Antonoglou, et al. “Playing Atari with Deep Reinforcement Learning”. (2013)
 
 ![dqn-in-atari](https://user-images.githubusercontent.com/10358317/49853048-fb9db900-fdf6-11e8-862d-d93acddceecf.jpg)
 
-## Imitation Learning:
+## Imitation Learning <a name="ImitationLearning"></a>:
 - Video: https://www.youtube.com/watch?time_continue=1&v=WjFdD7PDGw0
 - Presentation PDF: https://drive.google.com/file/d/12QdNmMll-bGlSWnm8pmD_TawuRN7xagX/view
 - Given: demonstrations or demonstrator.
@@ -410,20 +418,20 @@ Disadvantages:
 
 ![imitation-learning2](https://user-images.githubusercontent.com/10358317/49951508-237e4100-ff0b-11e8-846f-5ff2c81b1fb7.jpg)
 
-### Dagger: Dataset Aggregation:
+### Dagger: Dataset Aggregation <a name="Dagger"></a>:
 Paper: https://www.cs.cmu.edu/~sross1/publications/Ross-AIStats11-NoRegret.pdf
 
 ![dagger](https://user-images.githubusercontent.com/10358317/49951510-24af6e00-ff0b-11e8-9ab6-06d949669a0e.jpg)
 
-### PLATO: Policy Learning with Adaptive Trajectory Optimization:
+### PLATO: Policy Learning with Adaptive Trajectory Optimization <a name="PLATO"></a>:
 - Kahn et al. ["PLATO: Policy Learning withAdaptive Trajectory Optimization"](https://arxiv.org/pdf/1603.00622.pdf) (2017)
 
 ![plato](https://user-images.githubusercontent.com/10358317/49951787-d2228180-ff0b-11e8-8c3e-386f57db782f.jpg)
 
-### One-Shot Imitation Learning:
+### One-Shot Imitation Learning <a name="OneShotImitation"></a>:
 - Video: https://www.youtube.com/watch?v=oMZwkIjZzCM
 
-## Meta-Learning:
+## Meta-Learning <a name="MetaLearning"></a>:
 - Meta-learning = learning to learn
 - Supervised meta-learning = supervised learning with datapoints that are entire datasets
 - If we can meta-learn a faster reinforcement learner, we can learn new tasks efficiently!
@@ -433,12 +441,12 @@ Paper: https://www.cs.cmu.edu/~sross1/publications/Ross-AIStats11-NoRegret.pdf
 ![meta-learning](https://user-images.githubusercontent.com/10358317/49952518-22e6aa00-ff0d-11e8-9008-43a459fae82d.jpg)
 
 
-## POMDPs (Partial Observable MDP): 
+## POMDPs (Partial Observable MDP) <a name="POMDPs"></a>: 
 ![pomdps](https://user-images.githubusercontent.com/10358317/49738014-5c19e280-fc9f-11e8-8ca6-fe8fbeb0a5df.jpg)
 [David Silver Lecture Notes]
 
 
-## Resources:
+## Resources <a name="Resources"></a>:
 
 - [Deep Reinforcement Learning from Berkeley](http://rail.eecs.berkeley.edu/deeprlcourse/) , [Video](https://www.youtube.com/playlist?list=PLkFD6_40KJIznC9CDbVTjAF2oyt8_VAe3)
 - [Deep RL Bootcamp](https://sites.google.com/view/deep-rl-bootcamp/lectures)
@@ -447,7 +455,7 @@ Paper: https://www.cs.cmu.edu/~sross1/publications/Ross-AIStats11-NoRegret.pdf
 - [Awesome RL - Github](https://github.com/aikorea/awesome-rl)
 
 
-## Important RL Papers:
+## Important RL Papers <a name="ImportantRLPapers"></a>:
 - Q-Learning: V.  Mnih, K. Kavukcuoglu, D. Silver, A. Graves, I. Antonoglou, et al. [“Playing Atari with Deep Reinforcement Learning”](https://arxiv.org/pdf/1312.5602.pdf). (2013).
 - V.  Mnih, K. Kavukcuoglu, D. Silver, et al. ["Human-level control through deep reinforcement learning"](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf) (Nature-2015).
 - Hasselt et al. ["Rainbow: Combining Improvements in Deep Reinforcement Learning"](https://arxiv.org/pdf/1710.02298.pdf) (2017).
@@ -471,7 +479,7 @@ Training Deep Neural Networks for Reinforcement Learning"](https://arxiv.org/pdf
 - Kahn et al. ["PLATO: Policy Learning withAdaptive Trajectory Optimization"](https://arxiv.org/pdf/1603.00622.pdf) (2017)
 
 
-## References:
+## References <a name="References"></a>:
 - Sutton & Barto Book: Reinforcement Learning: An Introduction
 - David Silver RL Lecture Notes: (http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)
 - Imitation Learning: https://sites.google.com/view/icml2018-imitation-learning/
