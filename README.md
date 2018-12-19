@@ -506,7 +506,7 @@ Training Deep Neural Networks for Reinforcement Learning"](https://arxiv.org/pdf
 
 
 ## References <a name="References"></a>:
-- Sutton & Barto Book: Reinforcement Learning: An Introduction
+- [Sutton & Barto Book: Reinforcement Learning: An Introduction](http://incompleteideas.net/book/bookdraft2017nov5.pdf)
 - David Silver RL Lecture Notes: (http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)
 - Imitation Learning: https://sites.google.com/view/icml2018-imitation-learning/
 - Udemy: https://www.udemy.com/artificial-intelligence-reinforcement-learning-in-python/ 
