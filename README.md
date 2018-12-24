@@ -479,6 +479,7 @@ Paper: https://www.cs.cmu.edu/~sross1/publications/Ross-AIStats11-NoRegret.pdf
 - [David Silver RL Lecture Notes](http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)
 - [Awesome RL - Github](https://github.com/aikorea/awesome-rl)
 - [Free Deep RL Course](https://simoninithomas.github.io/Deep_reinforcement_learning_Course/)
+- [OpenAI - Spinning Up](http://spinningup.openai.com/)
 
 
 ## Important RL Papers <a name="ImportantRLPapers"></a>:
